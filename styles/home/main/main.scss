@@ -1,0 +1,177 @@
+@use '../../abstract/mixins';
+@use '../../abstract/var';
+@use '../../abstract/root';
+
+
+
+body{
+    // background-color: aqua;
+    background-image: linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)), url(../../../assets/images/Foto-grupo-1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.15);
+  transition: background 1s ease;
+}
+
+body:hover::before {
+  background: rgba(0,0,0,0.2);
+}
+
+.header{
+    padding: .7% 4%; // 1rem vertical, 5% horizontal
+    // background-color: var.$azul-primario;
+    background: linear-gradient(90deg, var.$azul-primario 0%, darken(var.$azul-primario, 10%) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius:  0  0 20px 20px;
+   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 
+            0 4px 12px rgba(0, 0, 0, 0.08);
+
+   .header__logo{
+    // background-color: aqua;
+     max-width: 200px;  // tamanho máximo em desktop
+     width: 100%;        // ocupa até o limite do container
+     height: auto;  
+     margin-left: 2rem;
+     transition: all 0.3s ease;
+   }
+
+   .header__menu{
+        margin-left: auto;
+        margin-right: 3rem;
+        display:flex;
+        align-items: center;
+        column-gap: 1.5rem;
+        transition: all 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+
+        .menu__item {
+            position: relative;
+
+            a {
+                @include mixins.font-style(var.$fonte, 20px, var.$white, 500);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                position: relative;
+                padding-bottom: 3px;
+                transition: color 0.3s ease;
+
+                &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 0%;
+                height: 2px;
+                background-color: var.$ciano;
+                transition: width 0.3s ease;
+                }
+            }
+
+            &:hover a {
+                color: var.$ciano;
+            }
+
+            &:hover a::after {
+                width: 100%;
+            }
+        }
+
+
+        .menu__item:hover a{
+            transition: .5s;
+            color: var.$ciano;
+        }
+    }
+
+    .header__theme-switch{
+        transform: scale(0.5); /* diminui pela metade */
+        transform-origin: center;
+        // background-color: aqua;
+        
+
+    }
+
+    .header__menu-hamb{
+        display: none;
+    }
+
+
+ 
+}
+
+
+.header > * {
+  flex: 0 auto; /* cada filho só ocupa o espaço que precisa */
+}
+
+
+
+@media (max-width: 768px) { // breakpoint para mobile/tablet
+
+  .header{
+     padding: 7% 4%; 
+
+     .header__menu-hamb {
+            display: block;
+            transform: scale(0.7);
+            margin-right: 1rem;
+     }
+    
+     .header__logo {
+       max-width: 120px; 
+    }
+
+    .header__menu {
+        display: none; // esconde o menu
+        position: absolute; // para sobrepor o header
+        top: 100%; // logo abaixo do header
+        right: 0;
+        background-color: var.$azul-primario;
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+         opacity: 0;
+        transform: translateY(-10px);
+
+         
+        
+        .menu__item {
+            margin-bottom: 1rem;
+            
+            .menu__item:last-child {
+            margin-bottom: 0;
+        }
+        }
+
+    
+        
+    }
+
+    .header__theme-switch{
+        display: none;
+        transform: scale(0.4);
+    }
+    
+ 
+
+    }
+
+
+ 
+}
+
+
+
+
+
+
