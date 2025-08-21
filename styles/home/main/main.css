@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url(../../../assets/images/Foto-grupo-1.jpeg);
+  background-image: url(../../../assets/images/Foto-grupo-1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -99,6 +99,7 @@ body:hover::before {
 }
 .header .header__menu-hamb {
   display: none;
+  margin: 0;
 }
 
 .header > * {
@@ -107,38 +108,46 @@ body:hover::before {
 
 @media (max-width: 768px) {
   .header {
-    padding: 7% 4%;
+    padding: 7% 3%;
   }
   .header .header__menu-hamb {
     display: block;
     transform: scale(0.7);
-    margin-right: 1rem;
   }
   .header .header__logo {
     max-width: 120px;
+    margin-left: 1rem;
   }
   .header .header__menu {
+    margin: 0;
+    margin-left: 1rem;
+    padding: 0;
     display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: #3C4D88;
-    flex-direction: column;
-    width: 200px;
-    padding: 1rem;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    align-items: center;
+    justify-content: flex-start;
     opacity: 0;
-    transform: translateY(-10px);
+    transition: opacity 0.3s ease;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
   }
-  .header .header__menu .menu__item {
-    margin-bottom: 1rem;
+  .header .header__menu .menu__item a {
+    font-family: "Dubai", sans-serif;
+    font-size: 12px;
+    color: #F5F5F5;
+    font-weight: 500;
   }
-  .header .header__menu .menu__item .menu__item:last-child {
+  .header .header__menu .menu__item:last-child {
     margin-bottom: 0;
   }
   .header .header__theme-switch {
     display: none;
     transform: scale(0.4);
+  }
+  .header .ativo {
+    display: flex;
+    opacity: 1;
+  }
+  .header .hidden {
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */
