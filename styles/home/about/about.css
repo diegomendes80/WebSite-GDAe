@@ -60,7 +60,7 @@ body {
   z-index: 1;
 }
 
-.slider-nav a {
+.slider-nav span {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;

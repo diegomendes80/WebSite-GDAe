@@ -58,19 +58,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //evento do slider:
 document.addEventListener("DOMContentLoaded", () => {
-  let count2 = 1;
-  const links = document.querySelectorAll(".slider-nav a");
+  const slider = document.querySelector(".slider");
+  const slides = slider.querySelectorAll("img");
+  const bullets = document.querySelectorAll(".slider-nav span");
+  let count = 0;
 
+  // autoplay
   setInterval(() => {
-    if( count2 < links.length){
-      links[count2].click();
-      count2++;
-    }
-    else{
-      count2=0;
-      links[count2].click();
-      count2++;
-    }
-  }, 5000)
+    const width = slider.clientWidth;
+    slider.scrollTo({ left: width * count, behavior: "smooth" });
 
+    bullets.forEach(b => b.classList.remove("active"));
+    bullets[count].classList.add("active");
+
+    count++;
+    if (count >= slides.length) count = 0;
+  }, 3500);
+
+  // clique nos bullets
+  bullets.forEach((bullet, i) => {
+    bullet.addEventListener("click", () => {
+      slider.scrollTo({ left: slider.clientWidth * i, behavior: "smooth" });
+      bullets.forEach(b => b.classList.remove("active"));
+      bullet.classList.add("active");
+      count = i + 1; // continua autoplay
+    });
+  });
 });
