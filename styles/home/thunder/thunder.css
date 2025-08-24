@@ -1,1 +1,51 @@
-/*# sourceMappingURL=thunder.css.map */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+.thunder {
+  background-image: url("../../../assets/images/fundo-grid-azul.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thunder .thunder__title {
+  font-family: "Dubai", sans-serif;
+  font-size: 70px;
+  color: #F5F5F5;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 1rem 0;
+}
+.thunder .thunder__container {
+  width: 800px;
+  height: 600px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .thunder__container {
+    width: 90%;
+    height: 400px;
+  }
+}
+@media (max-width: 600px) {
+  .thunder__container {
+    width: 100%;
+    height: 300px;
+  }
+}/*# sourceMappingURL=thunder.css.map */
