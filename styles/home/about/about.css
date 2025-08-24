@@ -83,6 +83,7 @@ body {
   max-width: 1000px;
 }
 .about__info .info__bg .info__container {
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
