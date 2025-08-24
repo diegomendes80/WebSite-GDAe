@@ -9,73 +9,133 @@
     <link rel="stylesheet" href="../styles/home/main/main.css">
     <link rel="stylesheet" href="../styles/home/main/theme.css">
     <link rel="stylesheet" href="../styles/home/main/menu-hamb.css">
-    <script src="../src/style.js"></script>
+    <link rel="stylesheet" href="../styles/home/about/about.css">
+    <script src="../src/animations.js"></script>
 
 </head>
 <body>
+    <div class="bg-slider"></div>
+
+    <section class="home">
+        <header class="header">
+            <img src="..//assets/images/logo-1.png" alt="logo do gdae" class="header__logo">
 
 
-    <header class="header">
-        <img src="..//assets/images/logo-1.png" alt="logo do gdae" class="header__logo">
+            <ul class="header__menu">
+                <li class="menu__item"><a href="#">Subsistemas</a></li>
+                <li class="menu__item"><a href="#">Notícias</a></li>
+                <li class="menu__item"><a href="#">Nossa História</a></li>
+            </ul>
+
+            <!-- Menu hamburguer que será exibido na versão mobile -->
+            <div class="header__menu-hamb">
+                <input id="checkbox" type="checkbox">
+                <label class="toggle" for="checkbox">
+                    <div id="bar1" class="bars"></div>
+                    <div id="bar2" class="bars"></div>
+                    <div id="bar3" class="bars"></div>
+                </label>
+            </div>
 
 
-        <ul class="header__menu">
-            <li class="menu__item"><a href="#">Subsistemas</a></li>
-            <li class="menu__item"><a href="#">Notícias</a></li>
-            <li class="menu__item"><a href="#">Nossa História</a></li>
-        </ul>
-
-        <!-- Menu hamburguer que será exibido na versão mobile -->
-        <div class="header__menu-hamb">
-             <input id="checkbox" type="checkbox">
-            <label class="toggle" for="checkbox">
-                <div id="bar1" class="bars"></div>
-                <div id="bar2" class="bars"></div>
-                <div id="bar3" class="bars"></div>
-            </label>
-        </div>
-
-
-        <div class="header__theme-switch">
-            <label class="bb8-toggle">
-                <input class="bb8-toggle__checkbox" type="checkbox">
-                <div class="bb8-toggle__container">
-                    <div class="bb8-toggle__scenery">
-                    <div class="bb8-toggle__star"></div>
-                    <div class="bb8-toggle__star"></div>
-                    <div class="bb8-toggle__star"></div>
-                    <div class="bb8-toggle__star"></div>
-                    <div class="bb8-toggle__star"></div>
-                    <div class="bb8-toggle__star"></div>
-                    <div class="bb8-toggle__star"></div>
-                    <div class="tatto-1"></div>
-                    <div class="tatto-2"></div>
-                    <div class="gomrassen"></div>
-                    <div class="hermes"></div>
-                    <div class="chenini"></div>
-                    <div class="bb8-toggle__cloud"></div>
-                    <div class="bb8-toggle__cloud"></div>
-                    <div class="bb8-toggle__cloud"></div>
+            <div class="header__theme-switch">
+                <label class="bb8-toggle">
+                    <input class="bb8-toggle__checkbox" type="checkbox">
+                    <div class="bb8-toggle__container">
+                        <div class="bb8-toggle__scenery">
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="bb8-toggle__star"></div>
+                        <div class="tatto-1"></div>
+                        <div class="tatto-2"></div>
+                        <div class="gomrassen"></div>
+                        <div class="hermes"></div>
+                        <div class="chenini"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                        <div class="bb8-toggle__cloud"></div>
+                        </div>
+                        <div class="bb8">
+                        <div class="bb8__head-container">
+                            <div class="bb8__antenna"></div>
+                            <div class="bb8__antenna"></div>
+                            <div class="bb8__head"></div>
+                        </div>
+                        <div class="bb8__body"></div>
+                        </div>
+                        <div class="artificial__hidden">
+                        <div class="bb8__shadow"></div>
+                        </div>
                     </div>
-                    <div class="bb8">
-                    <div class="bb8__head-container">
-                        <div class="bb8__antenna"></div>
-                        <div class="bb8__antenna"></div>
-                        <div class="bb8__head"></div>
-                    </div>
-                    <div class="bb8__body"></div>
-                    </div>
-                    <div class="artificial__hidden">
-                    <div class="bb8__shadow"></div>
-                    </div>
+                </label>
+            </div>
+
+
+        </header>
+
+       
+            <h1 class="info__title">Inovação</h1>
+        
+        
+    </section>
+  
+
+    <section class="about">
+
+        <section class="container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img src="../assets/images/Foto-grupo-1.jpeg" alt="" id="slide1">
+                    <img src="../assets/images/foto-grupo-2.jpeg" alt="" id="slide2">
+                    <img src="../assets/images/foto-grupo-3.png" alt="" id="slide3">
+                    <img src="../assets/images/foto-grupo-4.png" alt="" id="slide4">
                 </div>
-            </label>
-        </div>
 
+                <div class="slider-nav">
+                    <a href="#slide1"></a>
+                    <a href="#slide2"></a>
+                    <a href="#slide3"></a>
+                    <a href="#slide4"></a>
+                </div>
+            </div>
+        </section>
 
-    </header>
+        <section class="about__info">
+           
+            <div class="info__bg">
+                <div class="info__container">
+                    <div class="container__title">
+                        <h1>07</h1>
+                    </div>
 
-    
+                    <p class="container__text">Anos de Existência</p>
+                </div>
+
+                <div class="info__container">
+                    <div class="container__title">
+                        <h1>+50</h1>
+                    </div>
+
+                    <p class="container__text">Lançamentos</p>
+                </div>
+
+                <div class="info__container">
+                    <div class="container__title">
+                        <h1>16</h1>
+                    </div>
+
+                    <p class="container__text">Projetos Desenvolvidos</p>
+                </div>
+            </div>
+
+             
+        </section>
+
+    </section>  
 
     
 </body>

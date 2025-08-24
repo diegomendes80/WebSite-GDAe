@@ -13,25 +13,31 @@ body {
 }
 
 body {
-  background-image: url(../../../assets/images/Foto-grupo-1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  transition: background-image 1s ease-in-out;
+  min-height: 100vh;
 }
 
-body::before {
-  content: "";
+.bg-slider {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.15);
-  transition: background 1s ease;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: background-image 1s ease-in-out;
 }
 
-body:hover::before {
-  background: rgba(0, 0, 0, 0.2);
+.home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  overflow: hidden; /* garante que o bg não vaze */
 }
 
 .header {
@@ -158,5 +164,36 @@ body:hover::before {
   }
   .header .hidden {
     display: none;
+  }
+}
+.info__title {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Dubai", sans-serif;
+  font-size: 130px;
+  color: #F5F5F5;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0;
+  margin-left: 5rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  animation: titleFloat 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@media (max-width: 768px) {
+  .home {
+    row-gap: 5rem;
+  }
+  .info__title {
+    margin-left: 1rem;
+    font-size: 50px;
   }
 }/*# sourceMappingURL=main.css.map */
