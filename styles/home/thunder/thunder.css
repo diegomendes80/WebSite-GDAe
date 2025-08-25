@@ -103,8 +103,97 @@ body {
   display: block;
 }
 
+@media (max-width: 1024px) {
+  .thunder .thunder__container {
+    width: 90%;
+    gap: 1.5rem;
+  }
+  .thunder .thunder__container .thunder__card {
+    flex: 0 0 450px;
+  }
+}
 @media (max-width: 768px) {
-  .thunder__card {
-    display: none;
+  .thunder {
+    padding: 1.5rem 0.75rem;
+  }
+  .thunder .thunder__title {
+    font-size: 48px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+  }
+  .thunder .thunder__container {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .thunder .thunder__container .thunder__3d {
+    height: 250px;
+    order: 1;
+  }
+  .thunder .thunder__container .thunder__card {
+    flex: none;
+    width: 100%;
+    order: 2;
+  }
+  .thunder .thunder__container .thunder__card .card__descr-wrapper {
+    padding: 16px;
+    gap: 10px;
+  }
+  .thunder .thunder__container .thunder__card .card__descr-wrapper .card__title {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .thunder .thunder__container .thunder__card .card__descr-wrapper .card__descr {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .thunder .thunder__container .thunder__card .card__descr-wrapper .card__descr li {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .thunder .thunder__container .thunder__card .card__descr-wrapper .card__descr li span {
+    margin-bottom: 2px;
+  }
+}
+@media (max-width: 480px) {
+  .thunder {
+    padding: 1rem 0.5rem;
+  }
+  .thunder .thunder__title {
+    font-size: 36px;
+    margin-bottom: 1rem;
+  }
+  .thunder .thunder__container {
+    width: 98%;
+    gap: 1rem;
+  }
+  .thunder .thunder__container .thunder__3d {
+    height: 200px;
+  }
+  .thunder .thunder__container .thunder__card .card__descr-wrapper {
+    padding: 12px;
+    gap: 8px;
+  }
+  .thunder .thunder__container .thunder__card .card__descr-wrapper .card__title {
+    font-size: 18px;
+  }
+  .thunder .thunder__container .thunder__card .card__descr-wrapper .card__descr {
+    gap: 8px;
+  }
+  .thunder .thunder__container .thunder__card .card__descr-wrapper .card__descr li {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 320px) {
+  .thunder .thunder__title {
+    font-size: 28px;
+  }
+  .thunder .thunder__container .thunder__card .card__descr-wrapper .card__title {
+    font-size: 16px;
+  }
+  .thunder .thunder__container .thunder__card .card__descr-wrapper .card__descr li {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=thunder.css.map */
