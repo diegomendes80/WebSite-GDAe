@@ -109,9 +109,6 @@ body {
     height: auto;
     gap: 1.5rem;
   }
-  .thunder__container .thunder__3d {
-    height: 250px;
-  }
   .thunder__container .thunder__card {
     flex: none;
     height: auto;
