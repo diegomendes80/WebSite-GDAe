@@ -44,7 +44,7 @@ body {
   align-items: stretch;
 }
 .thunder .thunder__container .thunder__3d {
-  min-height: 200px;
+  min-height: 300px;
   position: relative;
   flex: 1;
   height: 100%;

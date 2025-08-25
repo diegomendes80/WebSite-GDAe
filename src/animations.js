@@ -92,9 +92,8 @@
     });
   });
 
-
-  // modelo 3d
-  document.addEventListener("DOMContentLoaded", () => {
+// modelo 3d
+document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector('.thunder__3d');
     const scene = new THREE.Scene();
 
@@ -104,7 +103,7 @@
         0.1,
         1000
     );
-    camera.position.set(0, 0, 4); // afastado para garantir visibilidade
+    camera.position.set(0, 0, 4);
 
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
@@ -132,19 +131,16 @@
             (obj) => {
                 object = obj;
 
-                // ESCALA antes de centralizar
                 const box = new THREE.Box3().setFromObject(object);
                 const size = box.getSize(new THREE.Vector3());
                 const maxDim = Math.max(size.x, size.y, size.z);
                 const scaleFactor = 5 / maxDim;
                 object.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
-                // CENTRALIZAR após escalar
                 const boxScaled = new THREE.Box3().setFromObject(object);
                 const center = boxScaled.getCenter(new THREE.Vector3());
                 object.position.sub(center);
 
-                // material de teste (remove se quiser usar MTL)
                 object.traverse((child) => {
                     if (child.isMesh) child.material = child.material || new THREE.MeshNormalMaterial();
                 });
@@ -159,9 +155,18 @@
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.enableZoom = false; 
-
     controls.minPolarAngle = Math.PI / 2;
-  controls.maxPolarAngle = Math.PI / 2;
+    controls.maxPolarAngle = Math.PI / 2;
+
+    // ✅ FUNÇÃO para redimensionar o renderer
+    function resizeRenderer() {
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height);
+    }
 
     function animate() {
         requestAnimationFrame(animate);
@@ -171,10 +176,17 @@
     }
     animate();
 
-    window.addEventListener('resize', () => {
-        camera.aspect = container.clientWidth / container.clientHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.clientWidth, container.clientHeight);
+    // ✅ OBSERVER para mudanças no container
+    const resizeObserver = new ResizeObserver(() => {
+        resizeRenderer();
+    });
+    resizeObserver.observe(container);
+
+    // ✅ FALLBACK para window resize (mantém compatibilidade)
+    window.addEventListener('resize', resizeRenderer);
+
+    // ✅ CLEANUP quando necessário
+    window.addEventListener('beforeunload', () => {
+        resizeObserver.disconnect();
     });
 });
-
