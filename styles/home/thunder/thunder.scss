@@ -34,6 +34,8 @@
         align-items: stretch;
 
         .thunder__3d {
+             min-height: 200px;
+            position: relative;
             flex: 1;
             height: 100%;
             background-color: rgba(255, 255, 255, 0.05); // placeholder suave
