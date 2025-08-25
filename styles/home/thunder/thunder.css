@@ -103,29 +103,8 @@ body {
   display: block;
 }
 
-@media (max-width: 900px) {
-  .thunder__container {
-    flex-direction: column;
-    width: 90%;
-    height: auto;
-    gap: 1.5rem;
-  }
-  .thunder__container .thunder__3d {
-    height: 300px;
-  }
-  .thunder__container .thunder__card {
-    flex: none;
-    height: auto;
-  }
-  .thunder__container .thunder__card .card__descr-wrapper {
-    margin-bottom: 2rem;
-  }
-  .thunder__container .thunder__card h2 {
-    font-size: 1.25rem;
-  }
-  .thunder__container .thunder__card ul li {
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-    padding: 8px;
+@media (max-width: 768px) {
+  .thunder__card {
+    display: none;
   }
 }/*# sourceMappingURL=thunder.css.map */

@@ -101,36 +101,10 @@
     }
 }
 
-@media (max-width: 900px) {
-    .thunder__container {
-        flex-direction: column;
-        width: 90%;
-        height: auto;
-        gap: 1.5rem;
-     
-
-        .thunder__3d {
-            height: 300px;
-        }
-
-        .thunder__card {
-            flex: none;
-            height: auto;
-            
-            .card__descr-wrapper{
-                margin-bottom: 2rem;
-            }
-
-            h2 {
-                font-size: 1.25rem;
-            }
-
-            ul li {
-                font-size: 0.9rem;
-                margin-bottom: 8px;
-                padding: 8px;
-            }
-        }
-    }
+@media (max-width: 768px) {
+   .thunder__card{
+        display: none;
+   }
+    
 
 }
