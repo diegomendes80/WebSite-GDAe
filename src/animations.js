@@ -95,7 +95,7 @@
 
   // modelo 3d
   document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector('.thunder__container');
+    const container = document.querySelector('.thunder__3d');
     const scene = new THREE.Scene();
 
     const camera = new THREE.PerspectiveCamera(
@@ -159,6 +159,9 @@
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.enableZoom = false; 
+
+    controls.minPolarAngle = Math.PI / 2;
+  controls.maxPolarAngle = Math.PI / 2;
 
     function animate() {
         requestAnimationFrame(animate);

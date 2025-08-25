@@ -13,13 +13,14 @@ body {
 
 .thunder {
   background-image: url("../../../assets/images/fundo-grid-azul.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem 1rem;
 }
 .thunder .thunder__title {
   font-family: "Dubai", sans-serif;
@@ -28,24 +29,102 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  margin: 1rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 .thunder .thunder__container {
-  width: 800px;
-  height: 600px;
-  border: 1px solid #ccc;
-  background-color: transparent;
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  gap: 2rem;
+  width: 80%;
+  max-width: 1000px;
+  height: 500px;
+  align-items: stretch;
+}
+.thunder .thunder__container .thunder__3d {
+  flex: 1;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+.thunder .thunder__container .thunder__card {
+  flex: 0 0 500px;
+  background-color: #F5F5F5;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+.thunder .thunder__container .thunder__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35), 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+.thunder .thunder__container .thunder__card .card__descr-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.thunder .thunder__container .thunder__card .card__descr-wrapper .card__title {
+  font-family: "Dubai", sans-serif;
+  font-size: 22px;
+  color: #1A1A1A;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.thunder .thunder__container .thunder__card .card__descr-wrapper .card__descr {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.thunder .thunder__container .thunder__card .card__descr-wrapper .card__descr li {
+  background-color: #f9f9f9;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  font-family: "Dubai", sans-serif;
+  font-size: 16px;
+  color: #1A1A1A;
+  font-weight: normal;
+}
+.thunder .thunder__container .thunder__card .card__descr-wrapper .card__descr li span {
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #333;
+  display: block;
 }
 
 @media (max-width: 900px) {
   .thunder__container {
+    flex-direction: column;
     width: 90%;
-    height: 400px;
+    height: auto;
+    gap: 1.5rem;
   }
-}
-@media (max-width: 600px) {
-  .thunder__container {
-    width: 100%;
-    height: 300px;
+  .thunder__container .thunder__3d {
+    height: 250px;
+  }
+  .thunder__container .thunder__card {
+    flex: none;
+    height: auto;
+  }
+  .thunder__container .thunder__card .card__descr-wrapper {
+    margin-bottom: 2rem;
+  }
+  .thunder__container .thunder__card h2 {
+    font-size: 1.25rem;
+  }
+  .thunder__container .thunder__card ul li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    padding: 8px;
   }
 }/*# sourceMappingURL=thunder.css.map */
