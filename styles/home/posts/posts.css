@@ -1,1 +1,223 @@
-/*# sourceMappingURL=posts.css.map */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+.posts {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.posts__news {
+  margin: 0 auto;
+  width: 80%;
+  background-color: #3E3C8F;
+  margin-top: 3rem;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.posts__news h2 {
+  font-family: "Dubai", sans-serif;
+  font-size: 40px;
+  color: #F5F5F5;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.posts__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+.posts__cards .cards__card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 400px;
+  max-height: 530px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08), -4px -4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.posts__cards .cards__card .card-image-container {
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background-color: rgb(165, 165, 165);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.posts__cards .cards__card .card-image-container .image-icon {
+  font-size: 40px;
+}
+.posts__cards .cards__card .card-title {
+  margin: 0;
+  font-family: "Dubai", sans-serif;
+  font-size: 18px;
+  color: #3E3C8F;
+  font-weight: 600;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+.posts__cards .cards__card .card-description {
+  font-family: "Dubai", sans-serif;
+  font-size: 16px;
+  color: #1A1A1A;
+  font-weight: 500;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 30%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  margin: 0;
+}
+.posts__cards .cards__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 1024px) {
+  .posts__cards {
+    gap: 1.5rem;
+  }
+  .posts__cards .cards__card {
+    width: 260px;
+  }
+}
+@media (max-width: 768px) {
+  .posts {
+    height: auto;
+    min-height: 100vh;
+  }
+  .posts__news {
+    height: auto;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+  }
+  .posts__news h2 {
+    font-family: "Dubai", sans-serif;
+    font-size: 28px;
+    color: #F5F5F5;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .posts__cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 1.5rem;
+    padding: 0 1rem 2rem;
+  }
+  .posts__cards .cards__card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    min-height: 380px;
+    max-height: none;
+  }
+  .posts__cards .cards__card .card-image-container {
+    height: 180px;
+    margin-bottom: 15px;
+  }
+  .posts__cards .cards__card .card-image-container .image-icon {
+    font-size: 35px;
+  }
+  .posts__cards .cards__card .card-title {
+    font-family: "Dubai", sans-serif;
+    font-size: 17px;
+    color: #3E3C8F;
+    font-weight: 600;
+    margin-bottom: 10px;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+  .posts__cards .cards__card .card-description {
+    font-family: "Dubai", sans-serif;
+    font-size: 15px;
+    color: #1A1A1A;
+    font-weight: 500;
+    height: auto;
+    flex: 1;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    line-height: 1.4;
+  }
+  .posts__cards .cards__card:hover {
+    transform: none;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08), -4px -4px 12px rgba(0, 0, 0, 0.08);
+  }
+}
+@media (max-width: 480px) {
+  .posts__news {
+    padding: 1.5rem 0.5rem;
+  }
+  .posts__news h2 {
+    font-family: "Dubai", sans-serif;
+    font-size: 24px;
+    color: #F5F5F5;
+    font-weight: 700;
+  }
+  .posts__cards {
+    padding: 0 0.5rem 1.5rem;
+    gap: 1rem;
+  }
+  .posts__cards .cards__card {
+    max-width: 100%;
+    min-height: 350px;
+    padding: 15px;
+  }
+  .posts__cards .cards__card .card-image-container {
+    height: 160px;
+    margin-bottom: 12px;
+  }
+  .posts__cards .cards__card .card-image-container .image-icon {
+    font-size: 30px;
+  }
+  .posts__cards .cards__card .card-title {
+    font-family: "Dubai", sans-serif;
+    font-size: 16px;
+    color: #3E3C8F;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .posts__cards .cards__card .card-description {
+    font-family: "Dubai", sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+    font-weight: 500;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+}/*# sourceMappingURL=posts.css.map */

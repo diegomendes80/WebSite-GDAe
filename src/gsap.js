@@ -44,3 +44,62 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power4.out"
   });
 })
+
+
+//animação dos cards-posts:
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Seleciona todos os cards
+    document.querySelectorAll(".cards__card").forEach((card, i) => {
+      gsap.from(card, {
+        opacity: 0,
+        y: 80,
+        scale: 0.9,
+        duration: 0.8,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 85%",   // começa quando o card chega a 85% da tela
+          toggleActions: "play none none reverse"
+        }
+      });
+    });
+
+    // Hover interativo
+    document.querySelectorAll(".cards__card").forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        gsap.to(card, {
+          y: -15,
+          scale: 1.05,
+          rotate: 1,
+          duration: 0.4,
+          ease: "power3.out"
+        });
+      });
+
+      card.addEventListener("mouseleave", () => {
+        gsap.to(card, {
+          y: 0,
+          scale: 1,
+          rotate: 0,
+          duration: 0.4,
+          ease: "power3.inOut"
+        });
+      });
+    });
+
+    // Entrada suave dos títulos dentro de cada card
+    document.querySelectorAll(".card-title").forEach((title) => {
+      gsap.from(title, {
+        opacity: 0,
+        y: 20,
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: title,
+          start: "top 90%"
+        }
+      });
+    });
+  });

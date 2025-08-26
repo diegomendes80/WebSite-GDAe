@@ -1,0 +1,220 @@
+@use '../../abstract/mixins';
+@use '../../abstract/var';
+@use '../../abstract/root';
+
+.posts{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts__news{
+    @include mixins.margem-central(80%);
+    background-color: var.$azul-escuro;
+    margin-top: 3rem;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        @include mixins.font-style(var.$fonte, 40px, var.$white, 700);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+
+.posts__cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap; // Permite quebra de linha
+    padding: 0 1rem; // Adiciona padding lateral
+
+    .cards__card{
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+        height: 400px;
+        max-height: 530px;
+        background-color: var(--white);
+        border-radius: 10px;
+        box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+            -4px -4px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: all 0.3s;
+        cursor: pointer;
+        box-sizing: border-box;
+        padding: 10px;
+
+        .card-image-container{
+            width: 100%;
+            height: 50%;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            background-color: rgb(165, 165, 165);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .image-icon {
+                font-size: 40px;
+            }
+        }
+
+        .card-title {
+            margin: 0;
+            @include mixins.font-style(var.$fonte, 18px, var.$azul-escuro, 600);
+            // cursor: default;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+        }
+
+        .card-description {
+            @include mixins.font-style(var.$fonte, 16px, var.$black, 500);
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 30%;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            margin: 0;
+            // cursor: default;
+        }
+    }
+
+    .cards__card:hover{
+        transform: translateY(-10px);
+        box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
+            -4px -4px 12px rgba(0, 0, 0, 0.08);
+    }
+}
+
+// Media queries com breakpoints mais específicos
+@media (max-width: 1024px) {
+    .posts__cards{
+        gap: 1.5rem;
+        
+        .cards__card{
+            width: 260px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .posts{
+        height: auto; 
+        min-height: 100vh;
+    }
+
+    .posts__news{
+        height: auto;
+        padding: 2rem 1rem;
+        margin-top: 1rem;
+        
+
+        h2{
+            @include mixins.font-style(var.$fonte, 28px, var.$white, 700);
+            text-align: center;
+            line-height: 1.2;
+        }
+    }
+
+    .posts__cards{
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        @include mixins.margem-central(80%);
+        margin-top: 1.5rem;
+        padding: 0 1rem 2rem;
+
+
+        .cards__card{
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            min-height: 380px;
+            max-height: none;
+
+            .card-image-container{
+                height: 180px;
+                margin-bottom: 15px;
+
+                .image-icon {
+                    font-size: 35px;
+                }
+            }
+
+            .card-title {
+                @include mixins.font-style(var.$fonte, 17px, var.$azul-escuro, 600);
+                margin-bottom: 10px;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+            }
+
+            .card-description {
+                @include mixins.font-style(var.$fonte, 15px, var.$black, 500);
+                height: auto;
+                flex: 1;
+                -webkit-line-clamp: 4;
+                line-clamp: 4;
+                line-height: 1.4;
+            }
+        }
+
+        // Remove hover effect no mobile para melhor UX
+        .cards__card:hover{
+            transform: none;
+            box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+                -4px -4px 12px rgba(0, 0, 0, 0.08);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .posts__news{
+        padding: 1.5rem 0.5rem;
+        
+        h2{
+            @include mixins.font-style(var.$fonte, 24px, var.$white, 700);
+        }
+    }
+
+    .posts__cards{
+        padding: 0 0.5rem 1.5rem;
+        gap: 1rem;
+
+        .cards__card{
+            max-width: 100%;
+            min-height: 350px;
+            padding: 15px;
+
+            .card-image-container{
+                height: 160px;
+                margin-bottom: 12px;
+
+                .image-icon {
+                    font-size: 30px;
+                }
+            }
+
+            .card-title {
+                @include mixins.font-style(var.$fonte, 16px, var.$azul-escuro, 600);
+                margin-bottom: 8px;
+            }
+
+            .card-description {
+                @include mixins.font-style(var.$fonte, 14px, var.$black, 500);
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+            }
+        }
+    }
+}
