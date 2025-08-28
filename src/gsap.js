@@ -103,3 +103,31 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+//animação do home-sub img
+document.addEventListener("DOMContentLoaded", () => {
+    gsap.from(".home-sub__image-sub img", {
+    duration: 1.2,
+    scale: 0.8,
+    opacity: 0,
+    ease: "power3.out"
+  });
+
+  gsap.to(".home-sub__image-sub img", {
+    y: -15,
+    duration: 1.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut"
+  });
+
+  gsap.from(".home-sub__info-sub", {
+        x: -150,
+      opacity: 0,
+      scale: 0.9,       // começa um pouco menor
+      duration: 1.5,
+      ease: "power3.out"
+  });
+    
+
+});

@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDAe - Grupo de Desenvolvimento Aeroespacial</title>
+    <link href="https://fonts.cdnfonts.com/css/dubai" rel="stylesheet">
     <link rel="stylesheet" href="/styles/eletronica/eletro.css">
     <link rel="stylesheet" href="/styles/home/main/main.css">
     <link rel="stylesheet" href="/styles/home/main/menu-hamb.css">
     <link rel="stylesheet" href="/styles/home/main/theme.css">
-    <link href="https://fonts.cdnfonts.com/css/dubai" rel="stylesheet">
-    <script src="/src/animations.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="/src/animations.js"></script>
     <script src="/src/gsap.js"></script>
 </head>
 <body>
@@ -19,7 +21,7 @@
             <ul class="header__menu">
                 <li class="menu__item dropdown"><a href="#">Subsistemas</a>
                     <ul class="dropdown__menu">
-                        <li><a href="eletro.html">Eletrônica</a></li>
+                        <li><a href="sub.html">Eletrônica</a></li>
                         <li><a href="mei.html">MEI</a></li>
                         <li><a href="aero.html">Aerodinâmica</a></li>
                         <li><a href="prop.html">Propulsão</a></li>
@@ -73,7 +75,23 @@
             </div>
     </header>
 
-    
+    <main class="main-sub">
+
+
+        <section class="main-sub__home-sub">
+            <div class="home-sub__info-sub">
+                <h1 class="info-sub__title">Eletrônica</h1>
+                <p class="info-sub__text">O Subsistema de Eletrônica é responsável pelo desenvolvimento, integração e teste dos sistemas eletrônicos do foguete, incluindo a aquisição de dados, controle de voo, comunicação e sistemas de energia. A equipe trabalha para garantir que todos os componentes eletrônicos funcionem de maneira eficiente e confiável durante o voo do foguete.</p>
+            </div>
+
+            <div class="home-sub__image-sub">
+                <img src="/assets/images/logo-eletro.png" alt="Imagem representando o subsistema de eletrônica" class="image-sub__img">
+            </div>
+        </section>
+
+
+    </main>
+
 
 </body>
 </html>
