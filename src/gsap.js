@@ -131,3 +131,32 @@ document.addEventListener("DOMContentLoaded", () => {
     
 
 });
+
+//animação cards-atividades
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.fromTo(".card-atividade",
+    { 
+      opacity: 0, 
+      y: 80, 
+      scale: 0.95 
+    }, 
+    { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1,
+      duration: 1.2, 
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".main-sub__atividades-sub",
+        start: "top bottom",   // quando começa a entrar
+        end: "top center",     // quando atinge o centro
+        toggleActions: "play none none reverse"
+      }
+    }
+  );
+
+
+
+})

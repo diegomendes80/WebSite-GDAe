@@ -1,6 +1,7 @@
 @use '../abstract/mixins';
 @use '../abstract/var';
 @use '../abstract/root';
+@use '../home/about/about.scss' as about;
 
 body {
    background-color: var.$white;
@@ -45,7 +46,7 @@ body {
          text-transform: uppercase;
          letter-spacing: 1.5px;
 
-         background: linear-gradient(90deg, var.$azul-primario, #00c6ff);
+         background: linear-gradient(90deg, var.$azul-primario, var.$ciano);
          -webkit-background-clip: text;
          -webkit-text-fill-color: transparent;
       }
@@ -109,6 +110,151 @@ body {
 
          img {
             width: 100%;
+         }
+      }
+   }
+}
+
+// AQUI TERMINA A SEÇÃO DO MAIN-SUB ------------------------------------------------------------
+
+.main-sub__atividades-sub{
+   @include mixins.margem-central(85%);
+   margin: 4rem auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   .atividades-sub__title {
+      @include mixins.font-style(var.$fonte, 48px, var.$azul-primario, 800);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 3rem;
+      position: relative;
+      text-align: center;
+      
+      // Gradiente no texto
+      background: linear-gradient(135deg, var.$azul-primario, var.$ciano);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      
+      // Linha decorativa embaixo
+      &::after {
+         content: "";
+         position: absolute;
+         bottom: -12px;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 80px;
+         height: 4px;
+         background: linear-gradient(90deg, var.$azul-primario, var.$ciano);
+         border-radius: 2px;
+         box-shadow: 0 2px 8px rgba(0, 198, 255, 0.3);
+      }
+      
+      // Efeito de brilho sutil
+      &::before {
+         content: "";
+         position: absolute;
+         top: -10px;
+         left: -10px;
+         right: -10px;
+         bottom: -10px;
+         background: linear-gradient(135deg, rgba(0, 198, 255, 0.05), rgba(var.$roxo, 0.05));
+         border-radius: 12px;
+         z-index: -1;
+         opacity: 0;
+         transition: opacity 0.3s ease;
+      }
+      
+     
+   }
+
+
+   .atividades-sub__cards{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      // background-color: aqua;
+
+      
+
+      .card-atividade{
+        
+         width: 30%;
+         background: var.$white;
+        border-radius: 1rem;
+         background: #e0e0e0;
+        //  background: var.$white;
+         box-shadow: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+        }
+    
+
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         .atividades__title{
+            @include mixins.font-style(var.$fonte, 24px, var.$azul-primario, bold);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 1rem;
+         }
+
+         img{
+              width: 300px;        // Define largura fixa
+            height: 200px;       // Define altura fixa
+            object-fit: cover;   // Mantém proporção cortando se necessário
+            border-radius: 0.5rem;
+         }
+
+         .atividades__text{
+            @include mixins.font-style(var.$fonte, 15px, var.$black, 500);
+            line-height: 1.5;
+            margin-top: 1rem;
+            text-align: center;
+            padding: 0 1rem;
+           width: 80%;
+         }
+
+
+      }
+   }
+}
+
+
+@media (max-width: 768px) {
+   .main-sub__atividades-sub {
+     
+      // width: 80%;
+
+      .atividades-sub__title{
+         font-size: 30px;
+      }
+
+      .atividades-sub__cards {
+
+         flex-direction: column;
+         row-gap: 2rem;
+
+         .card-atividade {
+            width: 100%;
+            .atividades__title{
+               font-size: 20px;
+               margin: 20px;
+            }
+            img {
+               width: 80%;
+               height: auto;
+            }
          }
       }
    }
