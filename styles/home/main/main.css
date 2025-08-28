@@ -50,6 +50,7 @@ body {
   justify-content: space-between;
   border-radius: 0 0 20px 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative; /* Importante para o z-index do dropdown */
 }
 .header .header__logo {
   max-width: 200px;
@@ -102,7 +103,7 @@ body {
   color: #209DB3;
 }
 .header .header__theme-switch {
-  transform: scale(0.5); /* diminui pela metade */
+  transform: scale(0.5);
   transform-origin: center;
 }
 .header .header__menu-hamb {
@@ -125,6 +126,7 @@ body {
 @media (max-width: 768px) {
   .header {
     padding: 7% 3%;
+    overflow: visible; /* Permite que o dropdown apareça fora do header */
   }
   .header .header__menu-hamb {
     display: block;
@@ -139,17 +141,29 @@ body {
     margin-left: 1rem;
     padding: 0;
     display: none;
-    align-items: center;
+    align-items: center; /* Volta para center para ficar em linha */
     justify-content: flex-start;
     transition: opacity 0.3s ease;
     -moz-column-gap: 1rem;
-         column-gap: 1rem;
+         column-gap: 1rem; /* Volta para column-gap */
+    flex-direction: row; /* Força direção linha */
+    width: auto; /* Remove largura fixa */
+  }
+  .header .header__menu .menu__item {
+    width: auto; /* Remove largura fixa */
+    flex-shrink: 0; /* Evita que o item encolha */
+    display: flex; /* Força flex no item */
+    align-items: center; /* Centraliza verticalmente */
   }
   .header .header__menu .menu__item a {
     font-family: "Dubai", sans-serif;
     font-size: 12px;
     color: #F5F5F5;
     font-weight: 500;
+    white-space: nowrap; /* Evita quebra de linha */
+    line-height: 1.2; /* Altura de linha consistente */
+    display: flex;
+    align-items: center;
   }
   .header .header__menu .menu__item:last-child {
     margin-bottom: 0;
@@ -195,5 +209,99 @@ body {
   .info__title {
     margin-left: 1rem;
     font-size: 50px;
+  }
+}
+.dropdown {
+  position: relative;
+}
+.dropdown .dropdown__menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 0;
+  border-radius: 8px;
+  list-style: none;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Garante que fique por cima */
+}
+.dropdown .dropdown__menu li {
+  padding: 0.3rem 1rem;
+}
+.dropdown .dropdown__menu li a {
+  font-family: "Dubai", sans-serif;
+  font-size: 16px;
+  color: #F5F5F5;
+  font-weight: 400;
+  display: block;
+  transition: 0.3s;
+}
+.dropdown .dropdown__menu li a:hover {
+  color: #209DB3;
+  transform: translateX(5px);
+}
+.dropdown:hover .dropdown__menu {
+  display: block;
+}
+
+/* Mobile: dropdown abre no toque (focus-within) */
+@media (max-width: 768px) {
+  .header__menu .dropdown {
+    width: auto; /* Remove largura 100% */
+    position: relative; /* Garante posicionamento correto */
+    display: flex;
+    align-items: center; /* Força alinhamento vertical */
+  }
+  .header__menu .dropdown > a {
+    width: auto; /* Remove largura 100% */
+    display: flex;
+    justify-content: flex-start; /* Alinha à esquerda */
+    align-items: center;
+    white-space: nowrap; /* Evita quebra de linha */
+    line-height: 1; /* Força mesma altura de linha */
+  }
+  .header__menu .dropdown > a::after {
+    content: "▾";
+    font-size: 12px;
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease;
+    line-height: 1; /* Mesma altura de linha para a seta */
+  }
+  .header__menu .dropdown .dropdown__menu {
+    display: none;
+    position: absolute; /* Volta a ser absolute */
+    top: 100%; /* Posiciona abaixo do item */
+    left: 0;
+    background: rgba(0, 0, 0, 0.9); /* Background mais escuro para mobile */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Volta a ter sombra */
+    padding: 0.5rem 0; /* Volta padding original */
+    margin-top: 0; /* Remove margin-top */
+    min-width: 150px; /* Define largura mínima */
+    border-radius: 8px; /* Volta border-radius */
+    z-index: 1000;
+    margin-top: 10px;
+  }
+  .header__menu .dropdown .dropdown__menu li {
+    padding: 0.3rem 1rem; /* Volta padding original */
+  }
+  .header__menu .dropdown .dropdown__menu li a {
+    font-family: "Dubai", sans-serif;
+    font-size: 14px;
+    color: #F5F5F5;
+    font-weight: 400;
+    padding: 0; /* Remove padding extra */
+    white-space: nowrap; /* Evita quebra de linha */
+  }
+  .header__menu .dropdown .dropdown__menu li a:hover {
+    color: #209DB3;
+    transform: translateX(5px);
+  }
+  .header__menu .dropdown:focus-within .dropdown__menu {
+    display: block;
+  }
+  .header__menu .dropdown:focus-within > a::after {
+    transform: rotate(180deg);
   }
 }/*# sourceMappingURL=main.css.map */

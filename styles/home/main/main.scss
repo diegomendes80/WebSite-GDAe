@@ -5,15 +5,11 @@
 
 
 body{
-    // // background-color: aqua;
-    // background-image:  url(../../../assets/images/Foto-grupo-1.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     transition: background-image 1s ease-in-out;
     min-height: 100vh;
-   
-
 }
 
 .bg-slider{
@@ -25,25 +21,19 @@ body{
   background-size: cover;     
   background-position: center; 
   z-index: -1; 
-   transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
 
 .home{
     display: flex;
     flex-direction: column;
-
     position: relative;
     height: 100vh;
     overflow: hidden; /* garante que o bg não vaze */
 }
 
-
-
 .header{
-
-    padding: .7% 4%; // 1rem vertical, 5% horizontal
-    // background-color: var.$azul-primario;
-    // background: linear-gradient(90deg, var.$azul-primario 0%, darken(var.$azul-primario, 10%) 100%);
+    padding: .7% 4%; 
     background: linear-gradient(to left, var.$azul-primario, var.$azul-claro, var.$roxo);
     background-size: 500% 100%;
     animation: degrade 4s infinite alternate;
@@ -51,17 +41,16 @@ body{
     align-items: center;
     justify-content: space-between;
     border-radius:  0  0 20px 20px;
-   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 
-            0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 
+                0 4px 12px rgba(0, 0, 0, 0.08);
+    position: relative; /* Importante para o z-index do dropdown */
 
    .header__logo{
-    // background-color: aqua;
-     max-width: 200px;  // tamanho máximo em desktop
-     width: 100%;        // ocupa até o limite do container
+     max-width: 200px;  
+     width: 100%;        
      height: auto;  
      margin-left: 2rem;
      transition: all 0.3s ease;
-     
    }
 
    .header__menu{
@@ -84,14 +73,14 @@ body{
                 transition: color 0.3s ease;
 
                 &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 0%;
-                height: 2px;
-                background-color: var.$ciano;
-                transition: width 0.3s ease;
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  width: 0%;
+                  height: 2px;
+                  background-color: var.$ciano;
+                  transition: width 0.3s ease;
                 }
             }
 
@@ -104,7 +93,6 @@ body{
             }
         }
 
-
         .menu__item:hover a{
             transition: .5s;
             color: var.$ciano;
@@ -112,20 +100,14 @@ body{
     }
 
     .header__theme-switch{
-        transform: scale(0.5); /* diminui pela metade */
+        transform: scale(0.5);
         transform-origin: center;
-        // background-color: aqua;
-        
-
     }
 
     .header__menu-hamb{
         display: none;
         margin: 0;
     }
-
-
- 
 }
 
 @keyframes degrade{
@@ -135,7 +117,6 @@ body{
 
     100%{
         background-position-x: 100%;
-
     }
 }
 
@@ -143,51 +124,51 @@ body{
   flex: 0 auto; /* cada filho só ocupa o espaço que precisa */
 }
 
-
 @media (max-width: 768px) {
   .header {
     padding: 7% 3%; 
-
+    overflow: visible; /* Permite que o dropdown apareça fora do header */
 
     .header__menu-hamb {
       display: block;
       transform: scale(0.7);
-
     }
     
     .header__logo {
       max-width: 120px; 
       margin-left: 1rem;
-      
     }
 
     .header__menu {
-        margin:0;
-        margin-left: 1rem;
-        padding: 0;
-      display: none;            // escondido por padrão
-      align-items: center;
+      margin:0;
+      margin-left: 1rem;
+      padding: 0;
+      display: none;            
+      align-items: center; /* Volta para center para ficar em linha */
       justify-content: flex-start;
       transition: opacity 0.3s ease;
-      column-gap: 1rem;
+      column-gap: 1rem; /* Volta para column-gap */
+      flex-direction: row; /* Força direção linha */
+      width: auto; /* Remove largura fixa */
       
-      
-
       .menu__item {
-        // background-color: red;
-
+        width: auto; /* Remove largura fixa */
+        flex-shrink: 0; /* Evita que o item encolha */
+        display: flex; /* Força flex no item */
+        align-items: center; /* Centraliza verticalmente */
+        
         a{
-                @include mixins.font-style(var.$fonte, 12px, var.$white, 500);
-                
-
+          @include mixins.font-style(var.$fonte, 12px, var.$white, 500);
+          white-space: nowrap; /* Evita quebra de linha */
+          line-height: 1.2; /* Altura de linha consistente */
+          display: flex;
+          align-items: center;
         }
 
         &:last-child {
           margin-bottom: 0;
         }
       }
-
-   
     }
 
     .header__theme-switch {
@@ -195,66 +176,150 @@ body{
       transform: scale(0.4);
     }
 
-    
-     .ativo {   
-        display: flex;
-        opacity: 1;
-      }
+    .ativo {   
+      display: flex;
+      opacity: 1;
+    }
     .hidden {
       display: none;
     }
   }
-
 }
 
 
 
-
-// AQUI ACABA A ESTILIZAÇÃO DO HEADER E BACKGROUND ---------------------------------------------------------------------------
-
+// AQUI ACABA A ESTILIZAÇÃO DO HEADER E BACKGROUND ------------------------------------
 
 
-
-
-    .info__title {
-        
-        width: fit-content;
-       
-        @include mixins.font-style(var.$fonte, 130px, var.$white, bold);
-        text-transform: uppercase;
-        padding: 0;
-        margin-left: 5rem;
-      
-        // background-color: aqua;
-
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-        animation: titleFloat 3s ease-in-out infinite alternate;
-    }
-
-
+.info__title {
+    width: fit-content;
+    @include mixins.font-style(var.$fonte, 130px, var.$white, bold);
+    text-transform: uppercase;
+    padding: 0;
+    margin-left: 5rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    animation: titleFloat 3s ease-in-out infinite alternate;
+}
 
 @keyframes titleFloat {
   0% { transform: translateY(0); }
   100% { transform: translateY(-10px); }
 }
 
-
-
-
 @media (max-width: 768px) {
+  .home{
+    row-gap:5rem;
+  }
 
-    .home{
-      row-gap:5rem;
-    }
-
-    .info__title{
-        margin-left: 1rem;
-        font-size: 50px;
-    }
-  
-
+  .info__title{
+    margin-left: 1rem;
+    font-size: 50px;
+  }
 }
 
 
 
+// 🔽 BLOCO SEPARADO: ESTILOS DO DROPDOWN
+.dropdown {
+  position: relative;
 
+  .dropdown__menu {
+    display: none;
+    position: absolute;
+    top: 100%;  
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    list-style: none;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000; /* Garante que fique por cima */
+
+    li {
+      padding: 0.3rem 1rem;
+
+      a {
+        @include mixins.font-style(var.$fonte, 16px, var.$white, 400);
+        display: block;
+        transition: 0.3s;
+
+        &:hover {
+          color: var.$ciano;
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+
+  &:hover .dropdown__menu {
+    display: block;
+  }
+}
+
+/* Mobile: dropdown abre no toque (focus-within) */
+@media (max-width: 768px) {
+  .header__menu {
+    .dropdown {
+      width: auto; /* Remove largura 100% */
+      position: relative; /* Garante posicionamento correto */
+      display: flex;
+      align-items: center; /* Força alinhamento vertical */
+    
+
+      > a {
+        width: auto; /* Remove largura 100% */
+        display: flex;
+        justify-content: flex-start; /* Alinha à esquerda */
+        align-items: center;
+        white-space: nowrap; /* Evita quebra de linha */
+        line-height: 1; /* Força mesma altura de linha */
+
+        &::after {
+          content: "▾";
+          font-size: 12px;
+          margin-left: .5rem;
+          transition: transform .2s ease;
+          line-height: 1; /* Mesma altura de linha para a seta */
+        }
+      }
+
+      .dropdown__menu {
+        display: none;
+        position: absolute; /* Volta a ser absolute */
+        top: 100%; /* Posiciona abaixo do item */
+        left: 0;
+        background: rgba(0,0,0,0.9); /* Background mais escuro para mobile */
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* Volta a ter sombra */
+        padding: .5rem 0; /* Volta padding original */
+        margin-top: 0; /* Remove margin-top */
+        min-width: 150px; /* Define largura mínima */
+        border-radius: 8px; /* Volta border-radius */
+        z-index: 1000; 
+        margin-top: 10px;
+
+        li {
+          padding: 0.3rem 1rem; /* Volta padding original */
+          
+          a {
+            @include mixins.font-style(var.$fonte, 14px, var.$white, 400);
+            padding: 0; /* Remove padding extra */
+            white-space: nowrap; /* Evita quebra de linha */
+            
+            &:hover {
+              color: var.$ciano;
+              transform: translateX(5px);
+            }
+          }
+        }
+      }
+
+      &:focus-within .dropdown__menu {
+        display: block;
+      }
+      &:focus-within > a::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
