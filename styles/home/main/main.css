@@ -127,6 +127,7 @@ body {
   .header {
     padding: 7% 3%;
     overflow: visible; /* Permite que o dropdown apareça fora do header */
+    align-items: center; /* Força alinhamento vertical de todos os elementos */
   }
   .header .header__menu-hamb {
     display: block;
@@ -144,10 +145,12 @@ body {
     align-items: center; /* Volta para center para ficar em linha */
     justify-content: flex-start;
     transition: opacity 0.3s ease;
-    -moz-column-gap: 1rem;
-         column-gap: 1rem; /* Volta para column-gap */
+    -moz-column-gap: 1.2rem;
+         column-gap: 1.2rem; /* Volta para column-gap */
     flex-direction: row; /* Força direção linha */
     width: auto; /* Remove largura fixa */
+    height: -moz-fit-content;
+    height: fit-content; /* Garante altura adequada */
   }
   .header .header__menu .menu__item {
     width: auto; /* Remove largura fixa */
@@ -157,7 +160,7 @@ body {
   }
   .header .header__menu .menu__item a {
     font-family: "Dubai", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     color: #F5F5F5;
     font-weight: 500;
     white-space: nowrap; /* Evita quebra de linha */
@@ -277,11 +280,10 @@ body {
     background: rgba(0, 0, 0, 0.9); /* Background mais escuro para mobile */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Volta a ter sombra */
     padding: 0.5rem 0; /* Volta padding original */
-    margin-top: 0; /* Remove margin-top */
+    margin-top: 10px; /* Espaçamento do item pai */
     min-width: 150px; /* Define largura mínima */
     border-radius: 8px; /* Volta border-radius */
     z-index: 1000;
-    margin-top: 10px;
   }
   .header__menu .dropdown .dropdown__menu li {
     padding: 0.3rem 1rem; /* Volta padding original */

@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+body {
+  background-color: #F5F5F5;
+  font-family: "Dubai", sans-serif;
+}/*# sourceMappingURL=eletro.css.map */

@@ -1,0 +1,13 @@
+@use '../abstract/mixins';
+@use '../abstract/var';
+@use '../abstract/root';
+
+
+body{
+   background-color: var.$white;
+   font-family: 'Dubai', sans-serif;
+   
+}
+
+
+
