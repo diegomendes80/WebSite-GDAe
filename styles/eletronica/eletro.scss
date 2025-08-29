@@ -354,14 +354,16 @@ body {
 @media (max-width: 768px) {
    .main-sub__membros-sub {
       width: 80%;
+      margin-bottom: 3rem;
       .membros-sub__title {
          font-size: 40px;
          // margin-bottom: 2rem;
       }
 
       .membros-sub__cards {
-         gap: 1.5rem;
-         
+         // gap: 1.5rem;
+         flex-direction: column;
+
          .membro-card {
             width: 100%;
             max-width: 320px;

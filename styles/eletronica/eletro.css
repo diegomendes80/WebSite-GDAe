@@ -431,12 +431,13 @@ body {
 @media (max-width: 768px) {
   .main-sub__membros-sub {
     width: 80%;
+    margin-bottom: 3rem;
   }
   .main-sub__membros-sub .membros-sub__title {
     font-size: 40px;
   }
   .main-sub__membros-sub .membros-sub__cards {
-    gap: 1.5rem;
+    flex-direction: column;
   }
   .main-sub__membros-sub .membros-sub__cards .membro-card {
     width: 100%;
