@@ -190,3 +190,27 @@ document.addEventListener("DOMContentLoaded", () => {
         resizeObserver.disconnect();
     });
 });
+
+
+//evento click do links de redes sociais
+  document.addEventListener("DOMContentLoaded", () => {
+      const socialLinks = {
+          twitter: "#",
+          instagram: "https://www.instagram.com/gdaeufc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+          linkedin: "https://www.linkedin.com/company/grupo-de-desenvolvimento-aeroespacial-da-ufc-gdae/",
+          github: "https://gitlab.com/gdaeufc/embedded-electronics"
+      };  
+
+      const buttons = document.querySelectorAll(".social-btn");
+      buttons.forEach(button => {
+          button.addEventListener("click", () => {
+              const id = button.id;
+              const url = socialLinks[id];
+              if (url) {
+                  window.open(url, "_blank");
+              } else {
+                  console.warn(`No URL defined for ${id}`);
+              }
+          });
+        });
+})

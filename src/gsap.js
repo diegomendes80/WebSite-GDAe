@@ -160,3 +160,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 })
+
+//animação cards-membros
+document.addEventListener("DOMContentLoaded", () => {
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".membro-card", {
+   scrollTrigger: {
+      trigger: ".membros-sub__cards",
+      start: "top 80%", // anima quando os cards entrarem na tela
+      toggleActions: "play none none reset"
+   },
+   opacity: 0,
+   y: 60,
+   rotateY: -15,
+   scale: 0.9,
+   transformOrigin: "center center",
+   duration: 2,
+   ease: "power3.out",
+   stagger: {
+      each: 0.2,  // um após o outro
+      from: "center" // começa do card central
+   }
+});
+
+
+})

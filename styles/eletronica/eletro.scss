@@ -9,6 +9,7 @@ body {
 }
 
 .main-sub__home-sub {
+   
    @include mixins.margem-central(80%);
    margin-top: 3rem;
    display: flex;
@@ -22,7 +23,7 @@ body {
 
    // 🔹 Fundo mais leve e contido
    background: linear-gradient(135deg, #f8f9fc, #ffffff);
-
+   
    &::before {
       content: "";
       position: absolute;
@@ -258,4 +259,131 @@ body {
          }
       }
    }
+}
+
+
+// AQUI TERMINA A SEÇÃO DO ATIVIDADES-SUB ------------------------------------------------------------
+.main-sub__membros-sub {
+   min-height: 100vh;
+   @include mixins.margem-central(85%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   // padding: 4rem 0;
+
+   .membros-sub__title {
+      @include mixins.font-style(var.$fonte, 42px, var.$azul-primario, 800);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 3rem;
+      position: relative;
+      text-align: center;
+
+      background: linear-gradient(135deg, var.$azul-primario, var.$ciano);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   }
+
+   .membros-sub__cards {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      width: 100%;
+
+
+      .membro-card {
+         background: var.$black;
+         border-radius: 1.5rem;
+         padding: 1.5rem;
+         width: 250px;
+         text-align: center;
+         box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+
+         // Brilho sutil ao hover
+         &:hover {
+            // transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+         }
+
+         .img-container {
+           
+            width: 90%;
+            height: 250px;
+            margin-bottom: 1.2rem;
+            overflow: hidden;
+            padding: 4px;
+            border-radius: 1rem;
+            background: linear-gradient(135deg, var.$azul-primario, var.$ciano);
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+               transition: transform 0.4s ease;
+            }
+
+            img:hover {
+               transform: scale(1.05);
+            }
+         }
+
+         .info-profile {
+            .profile__name {
+               @include mixins.font-style(var.$fonte, 22px, var.$white, 700);
+               text-transform: uppercase;
+               margin-bottom: .4rem;
+               letter-spacing: 1px;
+            }
+
+            .profile__course {
+               @include mixins.font-style(var.$fonte, 16px, var.$ciano, 500);
+               opacity: 0.9;
+            }
+         }
+
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .main-sub__membros-sub {
+      width: 80%;
+      .membros-sub__title {
+         font-size: 40px;
+         // margin-bottom: 2rem;
+      }
+
+      .membros-sub__cards {
+         gap: 1.5rem;
+         
+         .membro-card {
+            width: 100%;
+            max-width: 320px;
+
+            .img-container{
+               img{
+                  aspect-ratio: 1/1;
+               }
+               height: 300px;
+            }
+
+            .info-profile {
+               .profile__name {
+                  font-size: 30px;
+               }
+
+               .profile__course {
+                  font-size: 20px;
+               }
+         }
+      }
+   }
+}
+
 }
