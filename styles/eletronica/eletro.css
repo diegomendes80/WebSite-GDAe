@@ -436,6 +436,7 @@ body {
   }
   .main-sub__membros-sub .membros-sub__title {
     font-size: 40px;
+    margin: 1rem 0;
   }
   .main-sub__membros-sub .membros-sub__cards {
     row-gap: 1.5rem;
