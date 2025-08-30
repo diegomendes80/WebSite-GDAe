@@ -163,27 +163,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //animação cards-membros
 document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.from(".membro-card", {
-   scrollTrigger: {
-      trigger: ".membros-sub__cards",
-      start: "top 80%", // anima quando os cards entrarem na tela
-      toggleActions: "play none none reset"
-   },
-   opacity: 0,
-   y: 60,
-   rotateY: -15,
-   scale: 0.9,
-   transformOrigin: "center center",
-   duration: 2,
-   ease: "power3.out",
-   stagger: {
-      each: 0.2,  // um após o outro
-      from: "center" // começa do card central
-   }
+  gsap.fromTo(
+    ".membro-card",
+    {
+      opacity: 0,
+      y: 60,
+      rotateY: -15,
+      scale: 0.9,
+      transformOrigin: "center center",
+    },
+    {
+      scrollTrigger: {
+        trigger: ".membros-sub__cards",
+        start: "top 80%", // anima quando os cards entram
+        toggleActions: "play none none none",
+      },
+      opacity: 1,
+      y: 0,
+      rotateY: 0,
+      scale: 1,
+      duration: 1.8,
+      ease: "power3.out",
+      stagger: {
+        each: 0.2,
+        from: "center", // começa do meio
+      },
+      onComplete: () => {
+        // efeito sutil contínuo (hover-like)
+        gsap.to(".membro-card", {
+          y: -5,
+          rotateY: 2,
+          duration: 2,
+          ease: "sine.inOut",
+          repeat: -1,
+          yoyo: true,
+          stagger: {
+            each: 0.15,
+            from: "edges", // vai das bordas para o centro
+          },
+        });
+      },
+    }
+  );
 });
 
-
-})

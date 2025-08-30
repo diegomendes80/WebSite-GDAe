@@ -53,6 +53,11 @@ body{
      transition: all 0.3s ease;
    }
 
+   
+    .header__logo:hover{
+      cursor: pointer;
+    }
+
    .header__menu{
         margin-left: auto;
         margin-right: 3rem;
@@ -140,6 +145,7 @@ body{
       margin-left: 1rem;
     }
 
+
     .header__menu {
       margin:0;
       margin-left: 1rem;
@@ -160,7 +166,7 @@ body{
         align-items: center; /* Centraliza verticalmente */
         
         a{
-          @include mixins.font-style(var.$fonte, 14px, var.$white, 500);
+          @include mixins.font-style(var.$fonte, 12px, var.$white, 500);
           white-space: nowrap; /* Evita quebra de linha */
           line-height: 1.2; /* Altura de linha consistente */
           display: flex;

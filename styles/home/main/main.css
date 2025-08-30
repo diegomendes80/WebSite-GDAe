@@ -59,6 +59,9 @@ body {
   margin-left: 2rem;
   transition: all 0.3s ease;
 }
+.header .header__logo:hover {
+  cursor: pointer;
+}
 .header .header__menu {
   margin-left: auto;
   margin-right: 3rem;
@@ -160,7 +163,7 @@ body {
   }
   .header .header__menu .menu__item a {
     font-family: "Dubai", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     color: #F5F5F5;
     font-weight: 500;
     white-space: nowrap; /* Evita quebra de linha */

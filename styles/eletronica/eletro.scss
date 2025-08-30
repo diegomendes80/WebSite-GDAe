@@ -46,6 +46,7 @@ body {
          margin: .5rem 0 1rem 0;
          text-transform: uppercase;
          letter-spacing: 1.5px;
+         
 
          background: linear-gradient(90deg, var.$azul-primario, var.$ciano);
          -webkit-background-clip: text;
@@ -89,6 +90,8 @@ body {
       flex-direction: column;
       row-gap: 2rem;
       text-align: center;
+      padding: 2rem 1rem;
+
 
       .home-sub__info-sub{
          max-width: 90%;
@@ -101,8 +104,13 @@ body {
 
       .home-sub__info-sub {
          order: 2;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         row-gap: 1rem;
          h1 {
-            font-size: 40px;
+            font-size: 35px;
+            line-height: 3rem;
          }
       }
 
@@ -132,6 +140,7 @@ body {
       margin-bottom: 3rem;
       position: relative;
       text-align: center;
+     
       
       // Gradiente no texto
       background: linear-gradient(135deg, var.$azul-primario, var.$ciano);
@@ -208,6 +217,7 @@ body {
             text-transform: uppercase;
             text-align: center;
             margin-bottom: 1rem;
+         
          }
 
          img{
@@ -221,6 +231,7 @@ body {
             @include mixins.font-style(var.$fonte, 15px, var.$black, 500);
             line-height: 1.5;
             margin-top: 1rem;
+            margin-bottom: 1.5rem;
             text-align: center;
             padding: 0 1rem;
            width: 80%;
@@ -269,13 +280,16 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
+   // justify-content: center;
    // padding: 4rem 0;
+   margin-bottom: 3rem;
 
    .membros-sub__title {
       @include mixins.font-style(var.$fonte, 42px, var.$azul-primario, 800);
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 3rem;
+      
       position: relative;
       text-align: center;
 
@@ -286,10 +300,11 @@ body {
 
    .membros-sub__cards {
       display: flex;
+      align-items: center;
       justify-content: center;
-      column-gap: 2.5rem;
+      flex-wrap: wrap; // Permite quebra de linha
+      gap: 2.5rem; // Substitui column-gap por gap para funcionar em ambas direções
       width: 100%;
-
 
       .membro-card {
          background: var.$black;
@@ -300,7 +315,6 @@ body {
          box-shadow: 0 8px 20px rgba(0,0,0,0.3);
          transition: transform 0.3s ease, box-shadow 0.3s ease;
       
-
          display: flex;
          flex-direction: column;
          align-items: center;
@@ -346,26 +360,26 @@ body {
                opacity: 0.9;
             }
          }
-
       }
    }
 }
 
 @media (max-width: 768px) {
    .main-sub__membros-sub {
-      width: 80%;
+      width: 100%;
+      // background-color: red;
       margin-bottom: 3rem;
       .membros-sub__title {
          font-size: 40px;
-         margin: 0;
+         // margin-bottom: 3rem;
       }
 
       .membros-sub__cards {
-         row-gap: 1rem;
+         row-gap: 3rem;
          flex-direction: column;
-         align-items: center  ;
+         align-items: center;
          .membro-card {
-            width: 100%;
+            width: 70%;
             max-width: 320px;
 
             .img-container{
@@ -383,9 +397,8 @@ body {
                .profile__course {
                   font-size: 20px;
                }
+            }
          }
       }
    }
-}
-
 }

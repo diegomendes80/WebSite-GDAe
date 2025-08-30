@@ -4,6 +4,17 @@
   import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
   import { OBJLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/OBJLoader.js';
   import { MTLLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/MTLLoader.js";
+
+
+//evento click logo gdae
+document.addEventListener("DOMContentLoaded", () => {
+const logo = document.querySelector(".header__logo");
+  logo.addEventListener("click", () => {
+      window.location.href = "index.html"; // Redireciona para a página inicial
+
+  })
+})
+
   //evento de troca de imagem de fundo:
   document.addEventListener("DOMContentLoaded", ()  => {
 
