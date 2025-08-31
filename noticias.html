@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GDAe - Grupo de Desenvolvimento Aeroespacial</title>
     <link href="https://fonts.cdnfonts.com/css/dubai" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/news/news.css">
     <link rel="stylesheet" href="/styles/home/main/main.css">
     <link rel="stylesheet" href="/styles/home/main/theme.css">
     <link rel="stylesheet" href="/styles/home/main/menu-hamb.css">
     <link rel="stylesheet" href="/styles/home/about/about.css">
     <link rel="stylesheet" href="/styles/home/thunder/thunder.css">
-    <link rel="stylesheet" href="/styles/home/posts/posts.css">
+    <!-- <link rel="stylesheet" href="/styles/home/posts/posts.css"> -->
     <link rel="stylesheet" href="/styles/home/footer/footer.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script type="module" src="/src/animations.js"></script>
-    <script src="/src/gsap.js"></script>
+    <!-- <script src="/src/gsap.js"></script> -->
 </head>
 <body>
-    <div class="bg-slider"></div>
-    <section class="home">
-        <header class="header">
+
+    <header class="header">
             <img src="..//assets/images/logo-1.png" alt="logo do gdae" class="header__logo">
             <ul class="header__menu">
                 <li class="menu__item dropdown"><a href="#">Subsistemas</a>
@@ -31,7 +32,7 @@
                         <li><a href="prop.html">Propulsão</a></li>
                     </ul>
                 </li>
-                <li class="menu__item"><a href="/noticias.html">Notícias</a></li>
+                <li class="menu__item"><a href="#">Notícias</a></li>
                 <li class="menu__item"><a href="#">Nossa História</a></li>
             </ul>
             <div class="header__menu-hamb">
@@ -77,90 +78,13 @@
                     </div>
                 </label>
             </div>
-        </header>
-        <h1 class="info__title">Inovação</h1>
-    </section>
+    </header>
 
+    <section class="main-noticias">
 
-    <section class="about">
-        <section class="container">
-            <div class="slider-wrapper">
-                <div class="slider">
-                    <img src="/assets/images/Foto-grupo-1.jpeg" alt="" id="slide1">
-                    <img src="/assets/images/foto-grupo-2.jpeg" alt="" id="slide2">
-                    <img src="/assets/images/foto-grupo-3.png" alt="" id="slide3">
-                    <img src="/assets/images/foto-grupo-4.png" alt="" id="slide4">
-                </div>
-                <div class="slider-nav">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </section>
-        <section class="about__info">
-            <div class="info__bg">
-                <div class="info__container">
-                    <div class="container__title">
-                        <h1>07</h1>
-                    </div>
-                    <p class="container__text">Anos de Existência</p>
-                </div>
-                <div class="info__container">
-                    <div class="container__title">
-                        <h1>+50</h1>
-                    </div>
-                    <p class="container__text">Lançamentos</p>
-                </div>
-                <div class="info__container">
-                    <div class="container__title">
-                        <h1>16</h1>
-                    </div>
-                    <p class="container__text">Projetos Desenvolvidos</p>
-                </div>
-            </div>
-        </section>
-    </section>
-
-
-
-
-    <section class="thunder">
-
-        <h1 class="thunder__title">thunder</h1>
-
-        <div class="thunder__container">
-            <div class="thunder__3d">
-            </div>
-
-            <div class="thunder__card">
-                <div class="card__descr-wrapper">
-                    <h2 class="card__title">Ficha Técnica</h2>
-                    
-                    <ul class="card__descr">
-                    <li class="descr-item"><span class="bold">Última Missão:</span> Thunder XV</li>
-                    <li class="descr-item"><span class="bold">Comprimento:</span> 1,60m</li>
-                    <li class="descr-item"><span class="bold">Peso:</span> 4kg</li>
-                    <li class="descr-item"><span class="bold">Apogeu:</span> 500m</li>
-                    <li class="descr-item"><span class="bold">Finalidade:</span> Testes de tecnologias inovadoras para futuros projetos</li>
-                    <li class="descr-item"><span class="bold">Uso:</span> Lançamentos experimentais pelo GDAe 
-                        Particularidade: Adaptado a cada lançamento com novos sistemas para avaliação de viabilidade</li>
-                    </ul>
-                
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="posts">
-
-        <div class="posts__news">
-            <h2 class="news__title">Últimas Notícias</h2>
-        </div>
-
-        <div class="posts__cards">
+       
+        
+        <section class="posts__cards main-noticias__secundarias">
             <div class="cards__card" id="card1">
                 <div class="card-image-container">
                     <svg
@@ -265,8 +189,35 @@
                     </p>
             </div>
         </div>
-    </section>
 
+        </section>
+
+        <section class="main-noticias__noticia-destaque">
+            
+            <div class="noticia-destaque__header">
+                <h2 class="noticia-destaque__title">Título da Notícia em Destaque</h2>
+                <p class="noticia-destaque__summary">Resumo breve da notícia em destaque. Esta seção oferece uma visão geral do conteúdo principal da notícia.</p>
+            </div>
+
+            <div class="noticia-destaque__img-container">
+                <img src="/assets/images/noticias/meteoro-verde.webp" alt="Imagem de destaque da notícia" class="noticia-destaque__img">
+            </div>
+
+            <div class="noticia-destaque__content">
+                <p class="content__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero ea, ducimus nisi fugit ex distinctio dolor, quam exercitationem quia beatae aut facere ad, harum perspiciatis repellat culpa vitae fugiat.lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero ea, ducimus nisi fugit ex distinctio dolor, quam exercitationem quia beatae aut facere ad, harum perspiciatis repellat culpa vitae fugiat.lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero ea, ducimus nisi fugit ex distinctio dolor, quam exercitationem quia beatae aut facere ad, harum perspiciatis repellat culpa vitae fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero ea, ducimus nisi fugit ex distinctio dolor, quam exercitationem quia beatae aut facere ad, harum perspiciatis repellat culpa vitae fugiat.lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero ea, ducimus nisi fugit ex distinctio dolor, quam exercitationem quia beatae aut facere ad, harum perspiciatis repellat culpa vitae fugiat.lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero ea, ducimus nisi fugit ex distinctio dolor, quam exercitationem quia beatae aut facere ad, harum perspiciatis repellat culpa vitae fugiat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero ea, ducimus nisi fugit ex distinctio dolor, quam exercitationem quia beatae aut facere ad, harum perspiciatis repellat culpa vitae fugiat.lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero ea, ducimus nisi fugit ex distinctio dolor, quam exercitationem quia beatae aut facere ad, harum perspiciatis repellat culpa vitae fugiat.lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur libero ea, ducimus nisi fugit ex distinctio dolor, quam exercitationem quia beatae aut facere ad, harum perspiciatis repellat culpa vitae fugiat.
+                </p>
+
+                <div class="content__footer">
+                    <span class="footer__date">Publicado em: 01 de Janeiro de 2024</span>
+                    <span class="footer__source">Fonte: CNN</span>
+                    <span class="footer__author">Por: Equipe GDAe</span>
+                </div>
+            </div>
+        </section>
+
+
+    </section>
 
     <section class="footer">
         <div class="social-links">
@@ -295,5 +246,7 @@
        
         </div>
     </section>
+
+
 </body>
 </html>
