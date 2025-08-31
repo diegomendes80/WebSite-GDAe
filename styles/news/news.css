@@ -13,12 +13,14 @@ body {
 
 body {
   font-family: "Dubai", sans-serif;
+  overflow-x: hidden;
 }
 
 .main-noticias {
   display: flex;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  overflow-x: hidden;
 }
 
 .posts__cards {
