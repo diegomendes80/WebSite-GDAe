@@ -19,7 +19,7 @@ body {
 .main-noticias {
   display: flex;
   margin-top: 2rem;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
   overflow-x: hidden;
 }
 
