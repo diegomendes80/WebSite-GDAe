@@ -75,8 +75,12 @@ body {
   align-items: center;
   justify-content: center;
 }
-.posts__cards .cards__card .card-image-container .image-icon {
-  font-size: 40px;
+.posts__cards .cards__card .card-image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }
 .posts__cards .cards__card .card-title {
   margin: 0;
