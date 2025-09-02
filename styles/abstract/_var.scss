@@ -9,3 +9,14 @@ $white: #F5F5F5;
 
 //fontes
 $fonte: 'Dubai', sans-serif;                          
+
+/* Gradientes modernos usando variáveis SASS */
+$gradient-primary: linear-gradient(135deg, azul-primario 0%, roxo 100%);
+$gradient-secondary: linear-gradient(135deg, azul-claro 0%, ciano 100%);
+$gradient-accent: linear-gradient(45deg, azul-escuro, azul-primario, roxo);
+
+/* Sombras modernas */
+$shadow-light: 0 4px 20px rgba(60, 77, 136, 0.1);
+$shadow-medium: 0 8px 32px rgba(60, 77, 136, 0.15);
+$shadow-heavy: 0 16px 64px rgba(60, 77, 136, 0.2);
+$shadow-glow: 0 0 30px rgba(32, 157, 179, 0.3);

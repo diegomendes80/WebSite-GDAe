@@ -1,0 +1,207 @@
+@use '../abstract/mixins';
+@use '../abstract/var';
+@use '../abstract/root';
+
+.main-historia{
+    @include mixins.margem-central(90%);
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    height: auto;
+    min-height: 200vh; // só pra testar a rolagem
+    font-family: 'Dubai', sans-serif;
+    padding: 3rem 0;
+}
+
+.linha-foguete {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(to bottom, var.$ciano, var.$azul-claro, var.$roxo);
+    border-radius: 3px;
+    box-shadow: 0 0 12px rgba(32, 157, 179, 0.6);
+  }
+
+  .foguete {
+    position: relative;
+    font-size: 2.5rem;
+    z-index: 2;
+    transform: translateY(0);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.7));
+  }
+}
+
+.main-historia__container {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  padding-left: 140px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container__secao-historia {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  background: linear-gradient(145deg, rgba(60,77,136,0.1), rgba(32,157,179,0.05));
+  border-radius: 2rem;
+  padding: 3rem 3rem 3rem 3rem;
+  box-shadow: var.$shadow-light;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+    background: linear-gradient(145deg, rgba(32,157,179,0.05), rgba(60,77,136,0.1));
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: var.$shadow-medium;
+  }
+
+  .secao-historia__text {
+    flex: 1;
+    color: var.$white;
+    font-family: var.$fonte;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    z-index: 2;
+
+    .ano {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var.$black;
+      letter-spacing: 2px;
+    }
+
+    .paragrafo {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var.$black; 
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -1.5rem;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: var.$ciano;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .secao-historia__img {
+    flex: 0 0 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    .img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 20px rgba(32,157,179,0.3);
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
+
+      &:hover {
+        transform: scale(1.05) rotate(-1deg);
+        box-shadow: 0 0 40px rgba(32,157,179,0.5);
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .main-historia {
+    @include mixins.margem-central(95%);
+    padding: 2rem 0;
+    justify-content: center;
+  }
+
+  .linha-foguete {
+    width: 60px;
+    
+    &::after {
+      width: 4px;
+    }
+
+    .foguete {
+      font-size: 2rem;
+    }
+  }
+
+  .main-historia__container {
+    padding-left: 0;
+    gap: 4rem;
+    width: 100%;
+  }
+
+  .container__secao-historia {
+    flex-direction: column !important;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    .secao-historia__text {
+      text-align: center;
+      gap: 1rem;
+
+      .ano {
+        font-size: 2rem;
+        letter-spacing: 1px;
+      }
+
+      .paragrafo {
+        font-size: 0.95rem;
+        text-align: left;
+        
+        &::before {
+          left: -1rem;
+          width: 3px;
+        }
+      }
+    }
+
+    .secao-historia__img {
+      flex: none;
+      width: 100%;
+      max-width: 300px;
+
+      .img {
+        border-radius: 1rem;
+        
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+    }
+  }
+}

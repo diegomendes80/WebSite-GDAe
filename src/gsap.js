@@ -209,3 +209,20 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 });
 
+//animação do foguete:
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".foguete", {
+    y: "80vh",
+    ease: "power2.out", // curva suave
+    scrollTrigger: {
+      trigger: ".main-historia",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1.5, // dá um "delay" na resposta → mais fluido
+    }
+  });
+});
+
