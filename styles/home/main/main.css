@@ -44,7 +44,7 @@ body {
 
 .header {
   padding: 0.7% 4%;
-  background: linear-gradient(to left, #3C4D88, #3C6A8F, #513885);
+  background: linear-gradient(to left, #3E3C8F, #513885, #3C4D88);
   background-size: 500% 100%;
   animation: degrade 4s infinite alternate;
   display: flex;

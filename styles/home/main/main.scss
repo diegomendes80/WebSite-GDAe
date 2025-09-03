@@ -22,6 +22,7 @@
     background-position: center; 
     z-index: -1; 
     transition: background-image 1s ease-in-out;
+    // background-image: url('../../../assets/images/pexels-pixabay-2159.jpg');
   }
 
   .home{
@@ -34,7 +35,7 @@
 
   .header{
       padding: .7% 4%; 
-      background: linear-gradient(to left, var.$azul-primario, var.$azul-claro, var.$roxo);
+      background: linear-gradient(to left, var.$azul-escuro, var.$roxo, var.$azul-primario);
 
 
       background-size: 500% 100%;

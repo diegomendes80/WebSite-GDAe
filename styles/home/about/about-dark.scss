@@ -1,0 +1,59 @@
+@use '../../abstract/mixins';
+@use '../../abstract/var';
+@use '../../abstract/root';
+
+
+
+
+.about{
+    background-color: #1A1A1A; // fundo principal dark
+
+}
+
+
+// ESTILO DO SLIDER ----------------------------------------------------------------------------
+
+.slider{
+     box-shadow: 0 10px 25px rgba(0,0,0,0.4), 
+                 0 5px 10px rgba(0,0,0,0.2); 
+   
+}
+
+
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+// ESTILO DO SLIDER ----------------------------------------------------------------------------
+
+.about__info{
+    .info__bg{
+
+        .info__container-dark{
+            background: #2A2A2A;
+            box-shadow: 
+                20px 20px 60px #141414,   // sombra escura
+                -20px -20px 60px #222222; // sombra clara bem discreta
+
+            &:hover {
+                box-shadow: 0 6px 25px rgba(0,0,0,0.6); // hover mais forte
+            }
+                
+            .container__title{
+                background: linear-gradient(135deg, var.$azul-primario, var.$roxo);
+                color: var.$white;
+
+                h1{
+                    @include mixins.font-style(var.$fonte, 40px, var.$white, bold);
+                }
+            }
+
+            .container__text{
+                @include mixins.font-style(var.$fonte, 30px, var.$white, bold);
+                color: var.$white;
+            }
+        }
+    }
+}
+
+

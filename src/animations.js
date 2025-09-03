@@ -240,3 +240,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
 });
 
+
+//evento troca de tema dark/light
+

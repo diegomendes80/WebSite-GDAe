@@ -1,0 +1,201 @@
+@charset "UTF-8";
+/* Gradientes modernos usando variáveis SASS */
+/* Sombras modernas */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  padding: 0.7% 4%;
+  background: linear-gradient(to left, #3E3C8F, #513885, #3C4D88);
+  background-size: 500% 100%;
+  animation: degrade 4s infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.header .header__logo {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  margin-left: 2rem;
+  transition: all 0.3s ease;
+}
+.header .header__logo:hover {
+  cursor: pointer;
+}
+.header .header__menu {
+  margin-left: auto;
+  margin-right: 3rem;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  transition: all 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+.header .header__menu .menu__item {
+  position: relative;
+}
+.header .header__menu .menu__item a {
+  font-family: "Dubai", sans-serif;
+  font-size: 20px;
+  color: #F5F5F5;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+}
+.header .header__menu .menu__item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #209DB3;
+  transition: width 0.3s ease;
+}
+.header .header__menu .menu__item:hover a {
+  color: #209DB3;
+}
+.header .header__menu .menu__item:hover a::after {
+  width: 100%;
+}
+.header .header__menu .menu__item:hover a {
+  transition: 0.5s;
+  color: #209DB3;
+}
+.header .header__theme-switch {
+  transform: scale(0.5);
+  transform-origin: center;
+}
+.header .header__menu-hamb {
+  display: none;
+  margin: 0;
+}
+
+@keyframes degrade {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+.header > * {
+  flex: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 7% 3%;
+    overflow: visible;
+    align-items: center;
+  }
+  .header .header__menu-hamb {
+    display: block;
+    transform: scale(0.7);
+  }
+  .header .header__logo {
+    max-width: 120px;
+    margin-left: 1rem;
+  }
+  .header .header__menu {
+    margin: 0;
+    margin-left: 1rem;
+    padding: 0;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    transition: opacity 0.3s ease;
+    -moz-column-gap: 1.2rem;
+         column-gap: 1.2rem;
+    flex-direction: row;
+    width: auto;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .header .header__menu .menu__item {
+    width: auto;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+  .header .header__menu .menu__item a {
+    font-family: "Dubai", sans-serif;
+    font-size: 12px;
+    color: #F5F5F5;
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+  }
+  .header .header__menu .menu__item:last-child {
+    margin-bottom: 0;
+  }
+  .header .header__theme-switch {
+    display: none;
+    transform: scale(0.4);
+  }
+  .header .ativo {
+    display: flex;
+    opacity: 1;
+  }
+  .header .hidden {
+    display: none;
+  }
+}
+.info__title {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Dubai", sans-serif;
+  font-size: 130px;
+  color: #F5F5F5;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0;
+  margin-left: 5rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  animation: titleFloat 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@media (max-width: 768px) {
+  .home {
+    row-gap: 5rem;
+  }
+  .info__title {
+    margin-left: 1rem;
+    font-size: 50px;
+  }
+}/*# sourceMappingURL=main-dark.css.map */
