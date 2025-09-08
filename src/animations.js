@@ -247,5 +247,6 @@ document.querySelector('.bb8-toggle__checkbox').addEventListener('change', () =>
   document.querySelector('.about').classList.toggle('about-dark');
   document.querySelector('.thunder').classList.toggle('thunder-dark');
   document.querySelector('.posts').classList.toggle('posts-dark');
+  document.querySelector('.footer').classList.toggle('footer-dark');
 
 })

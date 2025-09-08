@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 1rem 0;
     width: 100%;
     .thunder__title {
         @include mixins.font-style(var.$fonte, 70px, var.$white, bold);
@@ -102,25 +102,28 @@
     }
 }
 
-// Responsividade para tablets (768px até 1024px)
-@media (max-width: 1024px) {
-    .thunder {
-        .thunder__container {
-            width: 90%;
-            gap: 1.5rem;
+// // Responsividade para tablets (768px até 1024px)
+// @media (max-width: 1024px) {
+//     .thunder {
+//         padding: 0;
+//         margin: 0 auto;
+//         .thunder__container {
+//             width: 90%;
+//             gap: 1.5rem;
 
             
-            .thunder__card {
-                flex: 0 0 450px;
-            }
-        }
-    }
-}
+//             .thunder__card {
+//                 flex: 0 0 450px;
+//             }
+//         }
+//     }
+// }
 
 // Responsividade para mobile (até 768px)
 @media (max-width: 768px) {
     .thunder {
-        padding: 1.5rem 0.75rem;
+        padding: 2rem 0;
+        margin: 0 auto;
         
         .thunder__title {
             font-size: 48px;
@@ -129,7 +132,7 @@
         }
 
         .thunder__container {
-            width: 95%;
+            width: 85%;
             height: auto;
             flex-direction: column;
             gap: 1.5rem;
@@ -172,68 +175,68 @@
     }
 }
 
-// Responsividade para mobile pequeno (até 480px)
-@media (max-width: 480px) {
-    .thunder {
-        padding: 1rem 0.5rem;
+// // Responsividade para mobile pequeno (até 480px)
+// @media (max-width: 480px) {
+//     .thunder {
+//         // padding: 1rem 0.5rem;
 
-        .thunder__title {
-            font-size: 36px;
-            margin-bottom: 1rem;
-        }
+//         .thunder__title {
+//             font-size: 36px;
+//             margin-bottom: 1rem;
+//         }
 
-        .thunder__container {
-            width: 98%;
-            gap: 1rem;
+//         .thunder__container {
+//             @include mixins.margem-central(90%);
+//             gap: 1rem;
 
-            .thunder__3d {
-                height: 200px;
-            }
+//             .thunder__3d {
+//                 height: 200px;
+//             }
 
-            .thunder__card {
-                .card__descr-wrapper {
-                    padding: 12px;
-                    gap: 8px;
+//             .thunder__card {
+//                 .card__descr-wrapper {
+//                     padding: 12px;
+//                     gap: 8px;
 
-                    .card__title {
-                        font-size: 18px;
-                    }
+//                     .card__title {
+//                         font-size: 18px;
+//                     }
 
-                    .card__descr {
-                        gap: 8px;
+//                     .card__descr {
+//                         gap: 8px;
 
-                        li {
-                            padding: 8px 10px;
-                            font-size: 13px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//                         li {
+//                             padding: 8px 10px;
+//                             font-size: 13px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
-// Responsividade para mobile muito pequeno (até 320px)
-@media (max-width: 320px) {
-    .thunder {
-        .thunder__title {
-            font-size: 28px;
-        }
+// // Responsividade para mobile muito pequeno (até 320px)
+// @media (max-width: 320px) {
+//     .thunder {
+//         .thunder__title {
+//             font-size: 28px;
+//         }
 
-        .thunder__container {
-            .thunder__card {
-                .card__descr-wrapper {
-                    .card__title {
-                        font-size: 16px;
-                    }
+//         .thunder__container {
+//             .thunder__card {
+//                 .card__descr-wrapper {
+//                     .card__title {
+//                         font-size: 16px;
+//                     }
 
-                    .card__descr {
-                        li {
-                            font-size: 12px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//                     .card__descr {
+//                         li {
+//                             font-size: 12px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

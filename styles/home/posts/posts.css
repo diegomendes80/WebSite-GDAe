@@ -127,7 +127,7 @@ body {
   }
   .posts__news {
     height: auto;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     margin-top: 1rem;
   }
   .posts__news h2 {
@@ -184,47 +184,5 @@ body {
   .posts__cards .cards__card:hover {
     transform: none;
     box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08), -4px -4px 12px rgba(0, 0, 0, 0.08);
-  }
-}
-@media (max-width: 480px) {
-  .posts__news {
-    padding: 1.5rem 0.5rem;
-  }
-  .posts__news h2 {
-    font-family: "Dubai", sans-serif;
-    font-size: 24px;
-    color: #F5F5F5;
-    font-weight: 700;
-  }
-  .posts__cards {
-    padding: 0 0.5rem 1.5rem;
-    gap: 1rem;
-  }
-  .posts__cards .cards__card {
-    max-width: 100%;
-    min-height: 350px;
-    padding: 15px;
-  }
-  .posts__cards .cards__card .card-image-container {
-    height: 160px;
-    margin-bottom: 12px;
-  }
-  .posts__cards .cards__card .card-image-container .image-icon {
-    font-size: 30px;
-  }
-  .posts__cards .cards__card .card-title {
-    font-family: "Dubai", sans-serif;
-    font-size: 16px;
-    color: #3E3C8F;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .posts__cards .cards__card .card-description {
-    font-family: "Dubai", sans-serif;
-    font-size: 14px;
-    color: #1A1A1A;
-    font-weight: 500;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
   }
 }/*# sourceMappingURL=posts.css.map */
