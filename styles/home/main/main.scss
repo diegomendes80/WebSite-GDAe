@@ -10,6 +10,7 @@
       background-position: center;
       transition: background-image 1s ease-in-out;
       min-height: 100vh;
+      overflow-x: hidden;
   }
 
   .bg-slider{
@@ -22,7 +23,7 @@
     background-position: center; 
     z-index: -1; 
     transition: background-image 1s ease-in-out;
-    // background-image: url('../../../assets/images/pexels-pixabay-2159.jpg');
+    background-image: url('../../../assets/images/Foto-grupo-1.jpeg');
   }
 
   .home{
