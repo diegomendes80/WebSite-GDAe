@@ -5,31 +5,14 @@
 
 
 
-.about{
+.about-dark{
     background-color: #1A1A1A; // fundo principal dark
 
-}
 
-
-// ESTILO DO SLIDER ----------------------------------------------------------------------------
-
-.slider{
-     box-shadow: 0 10px 25px rgba(0,0,0,0.4), 
-                 0 5px 10px rgba(0,0,0,0.2); 
-   
-}
-
-
-.slider-nav a:hover{
-    opacity: 1;
-}
-
-// ESTILO DO SLIDER ----------------------------------------------------------------------------
-
-.about__info{
+    .about__info{
     .info__bg{
 
-        .info__container-dark{
+        .info__container{
             background: #2A2A2A;
             box-shadow: 
                 20px 20px 60px #141414,   // sombra escura
@@ -55,5 +38,25 @@
         }
     }
 }
+
+   
+    .slider-wrapper{
+
+     box-shadow: 0 10px 25px rgba(0,0,0,0.4), 
+                 0 5px 10px rgba(0,0,0,0.2); 
+   
+
+        .slider-nav a:hover{
+            opacity: 1;
+        }
+
+    }
+}
+
+
+
+
+
+
 
 

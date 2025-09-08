@@ -6,6 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 * {
@@ -14,39 +15,36 @@ body {
   outline: none;
 }
 
-.about {
+.about-dark {
   background-color: #1A1A1A;
 }
-
-.slider {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.slider-nav a:hover {
-  opacity: 1;
-}
-
-.about__info .info__bg .info__container-dark {
+.about-dark .about__info .info__bg .info__container {
   background: #2A2A2A;
   box-shadow: 20px 20px 60px #141414, -20px -20px 60px #222222;
 }
-.about__info .info__bg .info__container-dark:hover {
+.about-dark .about__info .info__bg .info__container:hover {
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
 }
-.about__info .info__bg .info__container-dark .container__title {
+.about-dark .about__info .info__bg .info__container .container__title {
   background: linear-gradient(135deg, #3C4D88, #513885);
   color: #F5F5F5;
 }
-.about__info .info__bg .info__container-dark .container__title h1 {
+.about-dark .about__info .info__bg .info__container .container__title h1 {
   font-family: "Dubai", sans-serif;
   font-size: 40px;
   color: #F5F5F5;
   font-weight: bold;
 }
-.about__info .info__bg .info__container-dark .container__text {
+.about-dark .about__info .info__bg .info__container .container__text {
   font-family: "Dubai", sans-serif;
   font-size: 30px;
   color: #F5F5F5;
   font-weight: bold;
   color: #F5F5F5;
+}
+.about-dark .slider-wrapper {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.about-dark .slider-wrapper .slider-nav a:hover {
+  opacity: 1;
 }/*# sourceMappingURL=about-dark.css.map */

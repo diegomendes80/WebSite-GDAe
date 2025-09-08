@@ -11,9 +11,9 @@ $white: #F5F5F5;
 $fonte: 'Dubai', sans-serif;                          
 
 /* Gradientes modernos usando variáveis SASS */
-$gradient-primary: linear-gradient(135deg, azul-primario 0%, roxo 100%);
-$gradient-secondary: linear-gradient(135deg, azul-claro 0%, ciano 100%);
-$gradient-accent: linear-gradient(45deg, azul-escuro, azul-primario, roxo);
+$gradient-primary: linear-gradient(135deg, $azul-primario 0%, $roxo 100%);
+$gradient-secondary: linear-gradient(135deg, $azul-claro 0%, $ciano 100%);
+$gradient-accent: linear-gradient(45deg, $azul-escuro, $azul-primario, $roxo);
 
 /* Sombras modernas */
 $shadow-light: 0 4px 20px rgba(60, 77, 136, 0.1);

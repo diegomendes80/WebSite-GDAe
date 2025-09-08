@@ -1,0 +1,43 @@
+@use '../../abstract/mixins';
+@use '../../abstract/var';
+@use '../../abstract/root';
+
+
+.posts-dark {
+    background-color: var.$black;
+    .posts__news {
+         background-color: var.$azul-primario; // fundo azul para destaque
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7); // sombra intensa
+   
+        h2 {
+            color: var.$white; // destaque branco
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); // brilho suave
+        }
+    }
+
+ 
+
+    .posts__cards {
+        .cards__card {
+            background: linear-gradient(145deg, rgba(26,26,26,0.95), rgba(40,40,40,0.95)); // leve efeito de luz
+            box-shadow: 
+                0 10px 20px rgba(0,0,0,0.5), 
+                inset 0 2px 4px rgba(255,255,255,0.05); // brilho interno
+
+            .card-image-container {
+                background: linear-gradient(135deg, rgba(32,157,179,0.1), rgba(60,77,136,0.1)); // luz sutil
+                img {
+                    filter: brightness(0.85); // escurece imagem para combinar
+                }
+            }
+
+            .card-title {
+                color: var.$ciano; // destaque em ciano
+            }
+
+            .card-description {
+                color: var.$white; // texto branco
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@use '../../abstract/mixins';
+@use '../../abstract/var';
+@use '../../abstract/root';
+
+.footer-dark{
+    background-color: var.$azul-primario; // fundo azul para destaque
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7); // sombra intensa
+    
+    .social-links{
+        #github svg {
+            fill: var.$white; // destaca no fundo preto
+        }
+
+        .social-btn {
+            background-color: var.$black; // fundo preto
+            color: var.$white; // texto/ícone branco
+            // box-shadow: 0px 10px 10px rgba(0,0,0,0.3); // sombra mais visível no fundo escuro
+
+            
+        }
+    }
+}

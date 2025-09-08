@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* Gradientes modernos usando variáveis SASS */
+/* Sombras modernas */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+.footer-dark {
+  background-color: #3C4D88;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+}
+.footer-dark .social-links #github svg {
+  fill: #F5F5F5;
+}
+.footer-dark .social-links .social-btn {
+  background-color: #1A1A1A;
+  color: #F5F5F5;
+}/*# sourceMappingURL=footer-dark.css.map */

@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* Gradientes modernos usando variáveis SASS */
+/* Sombras modernas */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+.posts-dark {
+  background-color: #1A1A1A;
+}
+.posts-dark .posts__news {
+  background-color: #3C4D88;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+}
+.posts-dark .posts__news h2 {
+  color: #F5F5F5;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.posts-dark .posts__cards .cards__card {
+  background: linear-gradient(145deg, rgba(26, 26, 26, 0.95), rgba(40, 40, 40, 0.95));
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+.posts-dark .posts__cards .cards__card .card-image-container {
+  background: linear-gradient(135deg, rgba(32, 157, 179, 0.1), rgba(60, 77, 136, 0.1));
+}
+.posts-dark .posts__cards .cards__card .card-image-container img {
+  filter: brightness(0.85);
+}
+.posts-dark .posts__cards .cards__card .card-title {
+  color: #209DB3;
+}
+.posts-dark .posts__cards .cards__card .card-description {
+  color: #F5F5F5;
+}/*# sourceMappingURL=post-dark.css.map */

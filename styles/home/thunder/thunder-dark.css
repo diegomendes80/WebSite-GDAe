@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* Gradientes modernos usando variáveis SASS */
+/* Sombras modernas */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+.thunder-dark {
+  position: relative;
+}
+.thunder-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 0;
+}
+.thunder-dark .thunder__title {
+  z-index: 1;
+  color: #F5F5F5;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.thunder-dark .thunder__container {
+  z-index: 1;
+}
+.thunder-dark .thunder__container .thunder__card {
+  background-color: #1A1A1A;
+  color: #F5F5F5;
+  border-radius: 20px;
+}
+.thunder-dark .thunder__container .thunder__card .card__descr-wrapper .card__title {
+  color: #209DB3;
+}
+.thunder-dark .thunder__container .thunder__card .card__descr-wrapper .card__descr li {
+  background-color: rgba(26, 26, 26, 0.8);
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  font-family: "Dubai", sans-serif;
+  font-size: 16px;
+  color: #F5F5F5;
+  font-weight: normal;
+}
+.thunder-dark .thunder__container .thunder__card .card__descr-wrapper .card__descr li span {
+  color: #209DB3;
+  font-weight: 700;
+  margin-bottom: 4px;
+  display: block;
+}/*# sourceMappingURL=thunder-dark.css.map */

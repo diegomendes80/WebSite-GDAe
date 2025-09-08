@@ -1,0 +1,65 @@
+@use '../../abstract/mixins';
+@use '../../abstract/var';
+@use '../../abstract/root';
+
+.thunder-dark{
+
+ position: relative; // necessário para o overlay
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0; // cobre toda a seção
+        background: rgba(0, 0, 0, 0.3); // leve camada preta
+        border-radius: 20px; // mantém cantos arredondados se necessário
+        pointer-events: none; // não bloqueia cliques
+        z-index: 0;
+    }
+
+
+
+    .thunder__title{
+        z-index: 1;
+        color: var.$white; // destaque branco
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); // brilho suave
+    }
+
+  .thunder__container {
+        z-index: 1;
+
+    .thunder__card {
+        background-color: var.$black; 
+        color: var.$white;
+        border-radius: 20px;
+        
+   
+
+        .card__descr-wrapper {
+            .card__title{
+                color: var.$ciano;
+            }
+
+            .card__descr {
+                li {
+                    background-color: rgba(26, 26, 26, 0.8);
+                    padding: 12px 15px;
+                    border-radius: 8px;
+                     box-shadow: 
+                        inset 0 2px 4px rgba(0,0,0,0.6),  
+                        0 1px 3px rgba(0,0,0,0.2);       
+                    border: 1px solid rgba(255,255,255,0.05); 
+                    @include mixins.font-style(var.$fonte, 16px, var.$white, normal);
+
+                    span {
+                        color: var.$ciano; // destaque em ciano
+                        font-weight: 700;
+                        margin-bottom: 4px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+}

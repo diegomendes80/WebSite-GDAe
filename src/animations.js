@@ -242,4 +242,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //evento troca de tema dark/light
+document.querySelector('.bb8-toggle__checkbox').addEventListener('change', () => {
+  document.querySelector('.home').classList.toggle('home-dark');
+  document.querySelector('.about').classList.toggle('about-dark');
+  document.querySelector('.thunder').classList.toggle('thunder-dark');
+  document.querySelector('.posts').classList.toggle('posts-dark');
 
+})
