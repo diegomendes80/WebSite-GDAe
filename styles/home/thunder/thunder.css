@@ -26,6 +26,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem;
+  width: 100%;
 }
 .thunder .thunder__title {
   font-family: "Dubai", sans-serif;

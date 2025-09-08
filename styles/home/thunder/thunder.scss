@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: center;
     padding: 2rem 1rem;
-
+    width: 100%;
     .thunder__title {
         @include mixins.font-style(var.$fonte, 70px, var.$white, bold);
         text-transform: uppercase;

@@ -16,14 +16,13 @@ body {
 }
 
 .posts {
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .posts__news {
-  margin: 0 auto;
-  width: 80%;
   background-color: #3E3C8F;
   margin-top: 3rem;
   width: 100%;
