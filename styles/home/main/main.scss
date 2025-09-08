@@ -136,7 +136,6 @@
   @media (max-width: 768px) {
     .header {
       padding: 7% 3%; 
-      overflow: visible; /* Permite que o dropdown apareça fora do header */
       align-items: center; /* Força alinhamento vertical de todos os elementos */
 
       .header__menu-hamb {
