@@ -1,0 +1,128 @@
+@use '../abstract/mixins';
+@use '../abstract/var';
+@use '../abstract/root';
+
+
+.dark-mode{
+    background-color: var.$black;
+    color: var.$white;
+
+
+.main-sub__home-sub {
+   background: linear-gradient(160deg, #1a1a1a, #242424);
+   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+
+   &::before {
+      background: radial-gradient(
+         circle at top left,
+         rgba(var.$azul-primario, 0.08),
+         transparent 70%
+      );
+   }
+
+   .home-sub__info-sub {
+      h1 {
+         background: linear-gradient(90deg, var.$ciano, var.$azul-primario);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+
+      p {
+         color: var.$white;
+         border-left: 3px solid var.$ciano;
+      }
+   }
+}
+
+// Seção de atividades
+.main-sub__atividades-sub {
+   .atividades-sub__title {
+      background: linear-gradient(135deg, var.$ciano, var.$roxo);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      &::after {
+         background: linear-gradient(90deg, var.$ciano, var.$roxo);
+         box-shadow: 0 2px 12px rgba(32, 157, 179, 0.4);
+      }
+   }
+
+   .atividades-sub__cards {
+      .card-atividade {
+         background: #1f1f1f;
+         box-shadow: 10px 10px 30px rgba(0,0,0,0.6),
+                     -10px -10px 30px rgba(255,255,255,0.05);
+
+         &:hover {
+            box-shadow: 0 6px 25px rgba(0,198,255,0.25);
+         }
+
+         .atividades__title {
+            color: var.$ciano;
+         }
+
+         .atividades__text {
+            color: var.$white;
+         }
+      }
+   }
+}
+
+// Cards de atividades
+.main-sub__atividades-sub {
+   .atividades-sub__cards {
+      .card-atividade {
+         background: #1f1f1f;
+         border: 1px solid rgba(0,198,255,0.15); // contorno sutil
+         border-radius: 12px;
+         box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+
+         transition: all 0.3s ease;
+
+         &:hover {
+            box-shadow: 0 8px 30px rgba(0,198,255,0.35);
+            transform: translateY(-4px); // levanta o card
+            border-color: rgba(0,198,255,0.4);
+         }
+
+         .atividades__title {
+            color: var.$ciano;
+         }
+
+         .atividades__text {
+            color: var.$white;
+         }
+      }
+   }
+}
+
+// Cards de membros
+.main-sub__membros-sub {
+   .membro-card {
+      background: #222;
+      border: 1px solid rgba(137, 58, 255, 0.15); // leve borda roxa
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+
+      transition: all 0.3s ease;
+
+      &:hover {
+         box-shadow: 0 10px 35px rgba(137, 58, 255, 0.35);
+         transform: translateY(-4px);
+         border-color: rgba(137, 58, 255, 0.4);
+      }
+
+      .info-profile {
+         .profile__name {
+            color: var.$white;
+         }
+
+         .profile__course {
+            color: var.$ciano;
+         }
+      }
+   }
+}
+
+
+}

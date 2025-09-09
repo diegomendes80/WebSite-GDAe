@@ -15,7 +15,7 @@ body {
   outline: none;
 }
 
-.home-dark .header {
+.dark-mode .header {
   background: linear-gradient(to left, #1A1A1A, #3E3C8F);
   background-size: 500% 100%;
   animation: degrade 4s infinite alternate;

@@ -15,14 +15,14 @@ body {
   outline: none;
 }
 
-.footer-dark {
+.dark-mode .footer {
   background-color: #3C4D88;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
 }
-.footer-dark .social-links #github svg {
+.dark-mode .footer .social-links #github svg {
   fill: #F5F5F5;
 }
-.footer-dark .social-links .social-btn {
+.dark-mode .footer .social-links .social-btn {
   background-color: #1A1A1A;
   color: #F5F5F5;
 }/*# sourceMappingURL=footer-dark.css.map */

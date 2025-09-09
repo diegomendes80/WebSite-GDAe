@@ -3,7 +3,8 @@
 @use '../../abstract/root';
 
 
-.posts-dark {
+.dark-mode{
+.posts {
     background-color: var.$black;
     .posts__news {
          background-color: var.$azul-primario; // fundo azul para destaque
@@ -40,4 +41,5 @@
             }
         }
     }
+}
 }

@@ -2,7 +2,8 @@
 @use '../../abstract/var';
 @use '../../abstract/root';
 
-.thunder-dark{
+.dark-mode{
+    .thunder{
 
  position: relative; // necessário para o overlay
 
@@ -62,4 +63,5 @@
     }
 }
 
+}
 }

@@ -15,10 +15,10 @@ body {
   outline: none;
 }
 
-.thunder-dark {
+.dark-mode .thunder {
   position: relative;
 }
-.thunder-dark::before {
+.dark-mode .thunder::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -27,23 +27,23 @@ body {
   pointer-events: none;
   z-index: 0;
 }
-.thunder-dark .thunder__title {
+.dark-mode .thunder .thunder__title {
   z-index: 1;
   color: #F5F5F5;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
-.thunder-dark .thunder__container {
+.dark-mode .thunder .thunder__container {
   z-index: 1;
 }
-.thunder-dark .thunder__container .thunder__card {
+.dark-mode .thunder .thunder__container .thunder__card {
   background-color: #1A1A1A;
   color: #F5F5F5;
   border-radius: 20px;
 }
-.thunder-dark .thunder__container .thunder__card .card__descr-wrapper .card__title {
+.dark-mode .thunder .thunder__container .thunder__card .card__descr-wrapper .card__title {
   color: #209DB3;
 }
-.thunder-dark .thunder__container .thunder__card .card__descr-wrapper .card__descr li {
+.dark-mode .thunder .thunder__container .thunder__card .card__descr-wrapper .card__descr li {
   background-color: rgba(26, 26, 26, 0.8);
   padding: 12px 15px;
   border-radius: 8px;
@@ -54,7 +54,7 @@ body {
   color: #F5F5F5;
   font-weight: normal;
 }
-.thunder-dark .thunder__container .thunder__card .card__descr-wrapper .card__descr li span {
+.dark-mode .thunder .thunder__container .thunder__card .card__descr-wrapper .card__descr li span {
   color: #209DB3;
   font-weight: 700;
   margin-bottom: 4px;

@@ -2,7 +2,8 @@
 @use '../../abstract/var';
 @use '../../abstract/root';
 
-.footer-dark{
+.dark-mode{
+    .footer{
     background-color: var.$azul-primario; // fundo azul para destaque
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7); // sombra intensa
     
@@ -19,4 +20,5 @@
             
         }
     }
+}
 }

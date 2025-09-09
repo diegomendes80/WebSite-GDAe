@@ -5,8 +5,9 @@
 
 
 
-.about-dark{
-    background-color: #1A1A1A; // fundo principal dark
+.dark-mode{
+    .about{
+            background-color: #1A1A1A; // fundo principal dark
 
 
     .about__info{
@@ -50,6 +51,7 @@
             opacity: 1;
         }
 
+    }
     }
 }
 

@@ -47,14 +47,20 @@ const logo = document.querySelector(".header__logo");
     const checkbox = document.getElementById("checkbox");
     const menu = document.querySelector(".header__menu");
     const logo = document.querySelector(".header__logo");
+    const theme = document.querySelector('.header__theme-switch');
 
     function sync() {
       if (checkbox.checked) {
         menu.classList.add("ativo");
         logo.classList.add("hidden");
+  
+
+
       } else {
         menu.classList.remove("ativo");
         logo.classList.remove("hidden");
+  
+
       }
     }
 
@@ -242,11 +248,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //evento troca de tema dark/light
-document.querySelector('.bb8-toggle__checkbox').addEventListener('change', () => {
-  document.querySelector('.home').classList.toggle('home-dark');
-  document.querySelector('.about').classList.toggle('about-dark');
-  document.querySelector('.thunder').classList.toggle('thunder-dark');
-  document.querySelector('.posts').classList.toggle('posts-dark');
-  document.querySelector('.footer').classList.toggle('footer-dark');
+const themeToggle = document.querySelector('.bb8-toggle__checkbox');
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark-mode');
+  themeToggle.checked = true; 
+}
 
-})
+themeToggle.addEventListener('change', () => {
+  if (themeToggle.checked) {
+    document.body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark'); 
+  } else {
+    document.body.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light');
+  }
+});
