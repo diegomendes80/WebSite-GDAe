@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* Gradientes modernos usando variáveis SASS */
+/* Sombras modernas */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+body {
+  background-color: #1A1A1A;
+  color: #F5F5F5;
+}
+
+.linha-foguete::after {
+  background: linear-gradient(to bottom, #209DB3, #3C6A8F, #513885);
+  box-shadow: 0 0 16px rgba(32, 157, 179, 0.8);
+}
+.linha-foguete .foguete {
+  filter: drop-shadow(0 0 10px rgba(32, 157, 179, 0.8));
+  color: #F5F5F5;
+}
+
+.container__secao-historia {
+  background: linear-gradient(145deg, rgba(60, 77, 136, 0.15), rgba(32, 157, 179, 0.08));
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+.container__secao-historia:nth-child(even) {
+  background: linear-gradient(145deg, rgba(32, 157, 179, 0.08), rgba(60, 77, 136, 0.15));
+}
+.container__secao-historia:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7);
+}
+.container__secao-historia .secao-historia__text {
+  color: #F5F5F5;
+}
+.container__secao-historia .secao-historia__text .ano {
+  color: #209DB3;
+}
+.container__secao-historia .secao-historia__text .paragrafo {
+  color: rgba(245, 245, 245, 0.85);
+}
+.container__secao-historia .secao-historia__text .paragrafo::before {
+  background: #209DB3;
+}
+.container__secao-historia .secao-historia__img .img {
+  box-shadow: 0 0 25px rgba(32, 157, 179, 0.4);
+}
+.container__secao-historia .secao-historia__img .img:hover {
+  box-shadow: 0 0 50px rgba(32, 157, 179, 0.7);
+}/*# sourceMappingURL=historia-dark.css.map */

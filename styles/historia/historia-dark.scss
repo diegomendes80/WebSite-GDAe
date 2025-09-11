@@ -1,0 +1,60 @@
+@use '../abstract/mixins';
+@use '../abstract/var';
+@use '../abstract/root';
+
+
+body {
+  background-color: var.$black;
+  color: var.$white;
+}
+
+.linha-foguete {
+  &::after {
+    background: linear-gradient(to bottom, var.$ciano, var.$azul-claro, var.$roxo);
+    box-shadow: 0 0 16px rgba(32, 157, 179, 0.8);
+  }
+
+  .foguete {
+    filter: drop-shadow(0 0 10px rgba(32, 157, 179, 0.8));
+    color: var.$white;
+  }
+}
+
+.container__secao-historia {
+  background: linear-gradient(145deg, rgba(60, 77, 136, 0.15), rgba(32, 157, 179, 0.08));
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+
+  &:nth-child(even) {
+    background: linear-gradient(145deg, rgba(32, 157, 179, 0.08), rgba(60, 77, 136, 0.15));
+  }
+
+  &:hover {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7);
+  }
+
+  .secao-historia__text {
+    color: var.$white;
+
+    .ano {
+      color: var.$ciano;
+    }
+
+    .paragrafo {
+      color: rgba(245, 245, 245, 0.85);
+
+      &::before {
+        background: var.$ciano;
+      }
+    }
+  }
+
+  .secao-historia__img {
+    .img {
+      box-shadow: 0 0 25px rgba(32, 157, 179, 0.4);
+
+      &:hover {
+        box-shadow: 0 0 50px rgba(32, 157, 179, 0.7);
+      }
+    }
+  }
+}
