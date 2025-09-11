@@ -72,8 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to(card, {
           y: -15,
           scale: 1.05,
-          rotate: 1,
-          duration: 0.4,
+          // rotate: 1,
+          duration: 0.2,
           ease: "power3.out"
         });
       });
@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to(card, {
           y: 0,
           scale: 1,
-          rotate: 0,
-          duration: 0.4,
+          // rotate: 0,
+          duration: 0.2,
           ease: "power3.inOut"
         });
       });

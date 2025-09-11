@@ -12,7 +12,8 @@
 .posts__news{
     // @include mixins.margem-central(80%);
     background-color: var.$azul-escuro;
-    margin-top: 3rem;
+
+    // margin-top: 3rem;
     width: 100%;
     height: 20%;
     display: flex;
@@ -30,8 +31,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 3rem;
+    margin-top: 5rem;
     flex-wrap: wrap; // Permite quebra de linha
     padding: 0 1rem; // Adiciona padding lateral
 
@@ -121,7 +122,7 @@
     .posts__news{
         height: auto;
         padding: 2rem 0;
-        margin-top: 1rem;
+        // margin-top: 1rem;
         
 
         h2{
