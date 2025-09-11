@@ -1,3 +1,5 @@
+
+
 //animação dos cards-info
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);

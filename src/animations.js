@@ -41,6 +41,43 @@ const logo = document.querySelector(".header__logo");
 
   // })
 
+//evento troca info-title
+document.addEventListener("DOMContentLoaded", () => {
+  let count3 = 1;
+ 
+  const info_title = document.querySelector('.info__title');
+  const words = [
+    'INOVAÇÃO',
+    'INPIRAÇÃO',
+    'EVOLUÇÃO',
+    'CRIATIVIDADE',
+    'EXCELÊNCIA'
+  ];
+
+  const changeWord = () => {
+  
+    gsap.to(info_title, { 
+      x: -100, 
+      opacity: 0, 
+      duration: 1.5, 
+      onComplete: () => {
+        
+        info_title.textContent = words[count3];
+        count3 = (count3 + 1) % words.length;
+
+       
+        gsap.fromTo(info_title, 
+          { x: 100, opacity: 0 }, 
+          { x: 0, opacity: 1, duration: 0.5 }
+        );
+      }
+    });
+  };
+
+
+  setInterval(changeWord, 7000);
+});
+
 
   //evento do menu hamburguer:
   document.addEventListener("DOMContentLoaded", () => {

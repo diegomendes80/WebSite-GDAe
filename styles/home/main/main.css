@@ -46,6 +46,10 @@ body {
   width: 100%;
   overflow: hidden; /* garante que o bg não vaze */
 }
+.home h1 {
+  position: relative;
+  display: inline-block;
+}
 
 .header {
   padding: 0.7% 4%;
@@ -203,7 +207,6 @@ body {
   padding: 0;
   margin-left: 5rem;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  animation: titleFloat 3s ease-in-out infinite alternate;
 }
 
 @keyframes titleFloat {
