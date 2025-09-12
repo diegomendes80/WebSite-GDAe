@@ -15,78 +15,65 @@ body {
   outline: none;
 }
 
-body {
+.dark-mode {
   background-color: #1A1A1A;
   color: #F5F5F5;
 }
-
-.posts__cards .cards__card {
+.dark-mode .posts__cards .cards__card {
   background-color: #2a2a2a;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4), -4px -4px 12px rgba(255, 255, 255, 0.05);
 }
-.posts__cards .cards__card .card-title {
+.dark-mode .posts__cards .cards__card .card-title {
   color: #F5F5F5;
 }
-.posts__cards .cards__card .card-description {
+.dark-mode .posts__cards .cards__card .card-description {
   color: rgba(245, 245, 245, 0.85);
 }
-
-.main-noticias__noticia-destaque {
+.dark-mode .main-noticias__noticia-destaque {
   background: linear-gradient(135deg, #1f1f1f 0%, rgba(26, 26, 26, 0.95) 100%);
   box-shadow: 0 8px 32px rgba(60, 77, 136, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
-
-.noticia-destaque__title {
+.dark-mode .noticia-destaque__title {
   background: linear-gradient(135deg, #209DB3 0%, #3C6A8F 50%, #3C4D88 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.noticia-destaque__summary {
+.dark-mode .noticia-destaque__summary {
   color: #F5F5F5;
 }
-
-.noticia-destaque__img-container {
+.dark-mode .noticia-destaque__img-container {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
-
-.noticia-destaque__content {
+.dark-mode .noticia-destaque__content {
   background: rgba(34, 34, 34, 0.85);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
-
-.content__text {
+.dark-mode .content__text {
   color: #F5F5F5;
   border-left: 4px solid #209DB3;
   background: linear-gradient(to right, rgba(32, 157, 179, 0.15), transparent);
 }
-
-.content__text::first-letter {
+.dark-mode .content__text::first-letter {
   color: #209DB3;
 }
-
-.content__footer {
+.dark-mode .content__footer {
   border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
-
-.content__footer span {
+.dark-mode .content__footer span {
   box-shadow: none;
 }
-
-.footer__date {
+.dark-mode .footer__date {
   background: linear-gradient(135deg, #1e3a5f, #0f172a);
   color: #60a5fa;
   border: 1px solid rgba(96, 165, 250, 0.3);
 }
-
-.footer__source {
+.dark-mode .footer__source {
   background: linear-gradient(135deg, #3b0764, #1e1b4b);
   color: #e879f9;
   border: 1px solid rgba(232, 121, 249, 0.3);
 }
-
-.footer__author {
+.dark-mode .footer__author {
   background: linear-gradient(135deg, #064e3b, #052e16);
   color: #86efac;
   border: 1px solid rgba(134, 239, 172, 0.3);

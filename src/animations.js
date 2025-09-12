@@ -269,20 +269,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 })
 
-//evento click dos posts
-document.addEventListener("DOMContentLoaded", () => {
-
-  document.querySelectorAll(".cards__card").forEach(post => {
-      post.addEventListener("click", () => {
-          const link = '/noticias.html'; // ou post.getAttribute('data-link') se quiser algo dinâmico
-          if (link) {
-              window.location.href = link;
-          }
-      });
-  });
-  
-});
-
 
 //evento troca de tema dark/light
 const themeToggle = document.querySelector('.bb8-toggle__checkbox');

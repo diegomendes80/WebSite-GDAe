@@ -1,0 +1,34 @@
+[
+  {
+    "id": "card1",
+    "title": "Cadê o Sol? Eclipse solar mais longo do século já tem data para acontecer",
+    "image": "/assets/images/noticias/noticia-eclipse.webp",
+    "alt": "Imagem de um eclipse solar",
+    "description": "Eclipse solar total será o mais longo do século, oferecendo uma oportunidade única para observação e pesquisas científicas, mas exige cuidados com a proteção ocular.",
+    "content": "Um eclipse solar total está marcado para **2 de agosto de 2027** — será o mais longo do século e poderá proporcionar uma experiência única de observação científica e visual. A sombra total da Lua atravessará dez países no Oriente Médio e Norte da África, incluindo Espanha, Marrocos, Argélia, Tunísia, Líbia, Egito, Sudão, Arábia Saudita, Iêmen e Somália — apenas nessas regiões o eclipse poderá ser visto em sua totalidade; nas demais áreas será parcial. Especialistas destacam que esse fenômeno faz parte do ciclo *Saros 136*, conhecido por gerar alguns dos eclipses solares mais duradouros. O fenômeno deve atrair turistas e pesquisadores interessados em estudar aspectos raros do Sol, como sua coroa, aproveitando o tempo prolongado de observação total. Para assistir ao eclipse com segurança, será imprescindível usar proteção ocular adequada — filtros de soldador número 14 como mínimo, pois olhar diretamente pode causar danos sérios à retina."
+  },
+  {
+    "id": "card2",
+    "title": "Foto mostra meteoro que emite luz verde cruzando o espaço",
+    "image": "/assets/images/noticias/meteoro-verde.webp",
+    "alt": "Imagem de um meteoro verde",
+    "description": "Bem no momento em que o astrofotógrafo alemão Fritz Helmut Hemmerich foi tirar uma foto da galáxia de Andrômeda, uma pequena pedra espacial cruzou bem na frente da companheira distante da Via Láctea.",
+    "content": "Durante uma sessão de astrofotografia em agosto de 2016, o fotógrafo alemão Fritz Helmut Hemmerich apontava sua câmera para a galáxia de Andrômeda quando algo surpreendente aconteceu — uma pequena rocha espacial deslizou pela frente do campo de visão, emitindo uma luz verde intensa. A imagem foi capturada próximo aos picos das chuvas de meteoros Perseidas e pouco depois da Delta Aquáridas; embora o cenário inicial fosse mirar uma, a faixa luminosa sugere que provavelmente o meteoro pertenceu à outra. A cor verde, relatam especialistas, se deve à vaporização de gases presentes no meteoroides ao entrar na atmosfera terrestre, que reagem ao calor gerado pelo atrito. Este raro registro visual combina a magnitude do universo distante com algo tão momentâneo quanto um meteoro — uma junção de tempo, espaço e luz que permanece mais no olhar do que na memória."
+  },
+  {
+    "id": "card3",
+    "title": "Mercúrio pode ter sido formado em colisão entre dois corpos semelhantes",
+    "image": "/assets/images/noticias/mercurio.webp",
+    "alt": "Imagem de um mercurio",
+    "description": "Estudo publicado na revista Nature Astronomy desafia explicações tradicionais sobre a origem do planeta mais interno do Sistema Solar e propõe cenário mais provável.",
+    "content": "Novas simulações detalhadas em hidrodinâmica sugerem que Mercúrio pode não ter sido resultado de um impacto extremo com um corpo muito maior, mas sim de uma colisão rasante entre dois protoplanetas de massas semelhantes. Esse tipo de evento, muito mais comum nos primórdios do Sistema Solar, pode explicar por que Mercúrio possui um núcleo metálico enorme — compondo cerca de 70% de sua massa — e uma crosta/ manto rochoso relativamente fino. Segundo o modelo, até 60% do manto original de Mercúrio teria sido arrancado durante o impacto, e parte desse material não foi reacumulado ao planeta, preservando sua desproporção interna. Essa hipótese, publicada na revista *Nature Astronomy*, ajuda a responder antigos mistérios sobre sua estrutura e poderá também iluminar como se formaram os outros planetas rochosos internos."
+  },
+  {
+    "id": "card4",
+    "title": "Reator nuclear na Lua: O projeto da NASA que pode mudar a exploração espacial",
+    "image": "/assets/images/noticias/reator-lua.webp",
+    "alt": "Imagem da lua",
+    "description": "Nasa aposta em reatores nucleares modulares para garantir energia contínua nas futuras missões lunares e marcar seu lugar em um mercado espacial emergente.",
+    "content": "A NASA planeja implantar um reator nuclear modular na Lua como parte de seu programa Artemis, com meta de operacionalização até 2030, para garantir fonte contínua de energia em missões lunares de longo prazo. O reator nuclear lunar deverá fornecer pelo menos 100 quilowatts, energia suficiente para manter habitats, iluminação, suporte à vida e operações científicas durante as semanas de escuridão lunar, quando a luz solar é inexistente. Os reatores modulares pequenos (SMRs) — compactos, flexíveis e seguros — são a tecnologia escolhida, com sistema desenvolvido em módulos na Terra e enviado para montagem lunar. Apesar disso, o projeto enfrenta desafios enormes: transporte de equipamentos pesados, adaptação ao ambiente extremo da Lua (sem ar, temperaturas variadas, radiação), além de barreiras regulatórias e de segurança. Se bem-sucedido, esse passo pode solidificar uma presença humana sustentável na Lua e abrir caminho para missões além dela, inclusive Marte."
+  }
+]
