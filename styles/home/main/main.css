@@ -139,11 +139,14 @@ body {
 
 @media (max-width: 768px) {
   .header {
+    display: flex;
     padding: 7% 3%;
+    height: 50px;
     align-items: center; /* Força alinhamento vertical de todos os elementos */
   }
   .header .header__menu-hamb {
     display: block;
+    order: 2;
     transform: scale(0.7);
   }
   .header .header__logo {
@@ -185,8 +188,11 @@ body {
     margin-bottom: 0;
   }
   .header .header__theme-switch {
-    display: none;
+    display: block;
+    margin-left: auto;
+    order: 1;
     transform: scale(0.4);
+    padding: 0;
   }
   .header .ativo {
     display: flex;

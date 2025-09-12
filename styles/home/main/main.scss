@@ -144,11 +144,15 @@
 
   @media (max-width: 768px) {
     .header {
+      display: flex;
       padding: 7% 3%; 
+      height: 50px;
+      // justify-content: space-between;
       align-items: center; /* Força alinhamento vertical de todos os elementos */
-
+      
       .header__menu-hamb {
         display: block;
+        order: 2;
         transform: scale(0.7);
       }
       
@@ -192,8 +196,12 @@
       }
 
       .header__theme-switch {
-        display: none;
+        display: block;
+        margin-left: auto;
+        order: 1;
         transform: scale(0.4);
+        padding: 0;
+        // background-color: aqua;
       }
 
       .ativo {   

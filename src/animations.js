@@ -90,13 +90,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (checkbox.checked) {
         menu.classList.add("ativo");
         logo.classList.add("hidden");
-  
+        theme.style.display = "none";
 
 
       } else {
         menu.classList.remove("ativo");
         logo.classList.remove("hidden");
-  
+        theme.style.display = "block";
+        
 
       }
     }
