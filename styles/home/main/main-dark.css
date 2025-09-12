@@ -15,6 +15,18 @@ body {
   outline: none;
 }
 
+.dark-mode .home {
+  position: relative;
+}
+.dark-mode .home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 0;
+}
 .dark-mode .header {
   background: linear-gradient(to left, #1A1A1A, #3E3C8F);
   background-size: 500% 100%;

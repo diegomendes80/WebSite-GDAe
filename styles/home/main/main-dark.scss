@@ -5,6 +5,23 @@
 
 
 .dark-mode{
+
+  .home{
+     position: relative; // necessário para o overlay
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0; // cobre toda a seção
+        background: rgba(0, 0, 0, 0.3); // leve camada preta
+        border-radius: 20px; // mantém cantos arredondados se necessário
+        pointer-events: none; // não bloqueia cliques
+        z-index: 0;
+    }
+
+  }
+
+
     .header{
         background: linear-gradient(
         to left, 
