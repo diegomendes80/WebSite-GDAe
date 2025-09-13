@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* Gradientes modernos usando variáveis SASS */
+/* Sombras modernas */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.autentication {
+  background: #F5F5F5;
+  padding: 2rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 16px 64px rgba(60, 77, 136, 0.2);
+  text-align: center;
+  font-family: "Dubai", sans-serif;
+  width: 340px;
+}
+.autentication__title {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+.autentication__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.autentication__input {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(26, 26, 26, 0.15);
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-family: "Dubai", sans-serif;
+  outline: none;
+  background: #F5F5F5;
+  color: #1A1A1A;
+  transition: all 0.3s ease;
+}
+.autentication__input:focus {
+  border-color: #3C4D88;
+  box-shadow: 0 0 0 3px rgba(60, 77, 136, 0.2);
+}
+.autentication__button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #3C4D88 0%, #513885 100%);
+  color: #F5F5F5;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(60, 77, 136, 0.1);
+}
+.autentication__button:hover {
+  box-shadow: 0 8px 32px rgba(60, 77, 136, 0.15);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .autentication {
+    margin: 0 auto;
+    width: 70%;
+  }
+}/*# sourceMappingURL=aut.css.map */

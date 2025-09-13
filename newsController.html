@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+    <link rel="shortcut icon" href="/assets/images/logo-2.png" type="image/x-icon">
+    <link href="https://fonts.cdnfonts.com/css/dubai" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/admin/aut.css">
+    <link rel="stylesheet" href="/styles/admin/controller.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="/src/animations.js"></script>
+    <script src="/src/gsap.js"></script>
+    
+    <script type="module" src="/src/aut.js"></script>
+    <script type="module" src="/src/newsController.js"></script>
+    
+</head>
+<body>
+
+<section class="main-criar-noticia">
+  <div class="criar-noticia__header">
+    <h2 class="criar-noticia__title">Criar Nova Notícia</h2>
+    <p class="criar-noticia__subtitle">Preencha os campos abaixo para adicionar uma nova publicação.</p>
+  </div>
+
+  <form class="criar-noticia__form">
+    <!-- Upload da Imagem -->
+    <div class="form-group">
+      <label for="imagem" class="form-label">Imagem de Capa</label>
+      <input type="text" id="imagem" name="imagem" accept="image/*" class="form-input file-input">
+    </div>
+
+    <!-- Título -->
+    <div class="form-group">
+      <label for="titulo" class="form-label">Título</label>
+      <input type="text" id="titulo" name="titulo" placeholder="Digite o título da notícia" class="form-input">
+    </div>
+
+    <!-- Resumo -->
+    <div class="form-group">
+      <label for="resumo" class="form-label">Resumo</label>
+      <textarea id="resumo" name="resumo" rows="3" placeholder="Escreva um breve resumo" class="form-input"></textarea>
+    </div>
+
+    <!-- Conteúdo -->
+    <div class="form-group">
+      <label for="conteudo" class="form-label">Conteúdo</label>
+      <textarea id="conteudo" name="conteudo" rows="8" placeholder="Escreva o conteúdo completo da notícia" class="form-input"></textarea>
+    </div>
+
+    <!-- Fonte -->
+    <div class="form-group">
+      <label for="fonte" class="form-label">Fonte</label>
+      <input type="text" id="fonte" name="fonte" placeholder="Fonte da notícia" class="form-input">
+    </div>
+
+    <!-- Data -->
+    <div class="form-group">
+      <label for="data" class="form-label">Data</label>
+      <input type="date" id="data" name="data" class="form-input">
+    </div>
+
+    <!-- Autor -->
+    <div class="form-group">
+      <label for="autor" class="form-label">Autor</label>
+      <input type="text" id="autor" name="autor" placeholder="Nome do autor" class="form-input">
+    </div>
+
+    <!-- Botão -->
+    <div class="form-actions">
+      <button type="submit" class="btn-criar">Publicar Notícia</button>
+    </div>
+  </form>
+</section>
+
+
+
+
+</body>  

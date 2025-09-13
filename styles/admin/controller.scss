@@ -1,0 +1,140 @@
+@use '../abstract/mixins';
+@use '../abstract/var';
+@use '../abstract/root';
+
+body{
+    height: 100vh;
+    width: 100vw;
+    padding: 30rem 0;
+    font-family: var.$fonte;
+}
+
+.main-criar-noticia {
+  width: 90%;              
+//   height: 80vh;          
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #F5F5F5 0%, rgba(245, 245, 245, 0.9) 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(26, 26, 26, 0.12);
+  border: 1px solid rgba(60, 77, 136, 0.1);
+  display: flex;
+  flex-direction: column;
+//   overflow-y: auto;        
+
+  .criar-noticia__header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .criar-noticia__title {
+      font-size: clamp(1.8rem, 4vw, 2.3rem);
+      font-weight: 700;
+      background: linear-gradient(135deg, #3E3C8F, #209DB3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .criar-noticia__subtitle {
+      font-size: 1rem;
+      color: #555;
+      font-style: italic;
+    }
+  }
+
+  .criar-noticia__form {
+    display: flex;
+    flex-wrap: wrap;            // permite campos lado a lado
+    gap: 1.5rem;
+    justify-content: space-between;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 45%;            // ocupa até metade da linha (ajustável)
+      min-width: 250px;          // evita campos muito pequenos
+
+      .form-label {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #3C4D88;
+      }
+
+      .form-input {
+        padding: 0.8rem 1rem;
+        border: 1px solid rgba(60, 77, 136, 0.3);
+        border-radius: 10px;
+        font-size: 1rem;
+        font-family: 'Dubai', sans-serif;
+        background: rgba(255, 255, 255, 0.9);
+        transition: border 0.3s, box-shadow 0.3s;
+
+        &:focus {
+          border: 1px solid #209DB3;
+          box-shadow: 0 0 8px rgba(32, 157, 179, 0.3);
+          outline: none;
+        }
+
+        &.file-input {
+          padding: 0.5rem;
+        }
+      }
+
+      textarea.form-input {
+        resize: vertical;
+      }
+    }
+
+    /* Faz Fonte, Data e Autor ficarem na mesma linha */
+    .form-group-inline {
+      display: flex;
+      gap: 1rem;
+      flex: 1 1 100%;   // ocupa a linha toda
+      justify-content: space-between;
+
+      .form-group {
+        flex: 1 1 30%;
+      }
+    }
+
+    .form-actions {
+      flex: 1 1 100%;
+      text-align: center;
+
+      .btn-criar {
+        background: linear-gradient(135deg, #3C4D88, #209DB3);
+        color: #fff;
+        font-size: 1.1rem;
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .main-criar-noticia {
+    height: auto;
+    width: 95%;
+    padding: 1.5rem;
+
+    .criar-noticia__form {
+      flex-direction: column;
+
+      .form-group,
+      .form-group-inline .form-group {
+        flex: 1 1 100%;
+      }
+    }
+  }
+}
