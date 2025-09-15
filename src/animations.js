@@ -12,7 +12,7 @@ const logo = document.querySelector(".header__logo");
   logo.addEventListener("click", () => {
     document.querySelector('.main-noticias').style.display = "flex";
     document.querySelector('.footer').style.display = "flex";
-    window.location.href = "index.html"; // Redireciona para a página inicial
+    window.location.href = "index.html";
 
   })
 })

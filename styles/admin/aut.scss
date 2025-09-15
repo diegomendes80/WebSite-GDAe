@@ -78,3 +78,7 @@ body{
         @include mixins.margem-central(70%);
 }
 }
+
+.hidden{
+  display: none;
+}

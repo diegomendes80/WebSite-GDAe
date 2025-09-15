@@ -80,4 +80,7 @@ body {
     margin: 0 auto;
     width: 70%;
   }
+}
+.hidden {
+  display: none;
 }/*# sourceMappingURL=aut.css.map */

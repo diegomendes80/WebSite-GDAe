@@ -1,7 +1,11 @@
-// aut.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } 
-  from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
+import { 
+  getAuth, 
+  signInWithEmailAndPassword, 
+  onAuthStateChanged, 
+  setPersistence, 
+  browserSessionPersistence 
+} from "https://www.gstatic.com/firebasejs/12.2.1/firebase-auth.js";
 
 // Config do Firebase
 const firebaseConfig = {
@@ -17,21 +21,45 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Evento de login
-const button = document.querySelector('.autentication__button');
+// Configura persistência apenas na aba atual
+setPersistence(auth, browserSessionPersistence)
+  .then(() => {
+    console.log("Sessão limitada à aba atual");
+  })
+  .catch(err => console.error("Erro ao configurar persistência:", err));
 
-button.addEventListener('click', (e) => {
-  e.preventDefault();
-  const user = document.querySelector('#user').value;
-  const password = document.querySelector('#pass').value;
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector('.autentication__button');
 
-  signInWithEmailAndPassword(auth, user, password)
-    .then(userCredential => {
-      console.log("Logado:", userCredential.user);
-      alert("Login realizado com sucesso!");
-    })
-    .catch(error => {
-      console.error(error.code, error.message);
-      alert("Erro no login: " + error.message);
+  // Evento de login
+  if (button) {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const user = document.querySelector('#user').value;
+      const password = document.querySelector('#pass').value;
+
+      signInWithEmailAndPassword(auth, user, password)
+        .then(userCredential => {
+          console.log("Logado:", userCredential.user);
+          // Redireciona para a página de cadastro/controle de notícias
+          
+          window.location.href = "newsController.html"; 
+          
+        })
+        .catch(error => {
+          console.error(error.code, error.message);
+          alert("Erro no login: " + error.message);
+        });
     });
+  }
+
+  // Verifica se o usuário está logado em páginas restritas
+  onAuthStateChanged(auth, (user) => {
+    const currentPage = window.location.pathname;
+
+    // Se não estiver logado e não estiver na página de login
+    if (!user && !currentPage.includes("aut.html")) {
+      window.location.href = "aut.html";
+    }
+  });
 });
