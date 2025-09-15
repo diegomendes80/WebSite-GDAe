@@ -17,31 +17,6 @@ const logo = document.querySelector(".header__logo");
   })
 })
 
-  //evento de troca de imagem de fundo:
-  // document.addEventListener("DOMContentLoaded", ()  => {
-
-  //     const images = [
-  //     '../assets/images/Foto-grupo-1.jpeg',
-  //     '../assets/images/foto-grupo-2.jpeg',
-  //     '../assets/images/foto-grupo-3.png',
-  //     '../assets/images/foto-grupo-4.png'
-  //     ];
-
-  //     let index = 0;
-  //     const bg = document.querySelector('.bg-slider');
-  //     // const bg = document.body;
-
-  //     function changeBackground() {
-  //     index = (index + 1) % images.length;
-  //     console.log('Trocando para:', images[index]);
-  //     bg.style.backgroundImage = `url(${images[index]})`;
-  //     }
-
-  //     bg.style.backgroundImage = `url(${images[index]})`;
-
-  //     setInterval(changeBackground, 5000); // troca a cada 5s
-
-  // })
 
 //evento troca info-title
 document.addEventListener("DOMContentLoaded", () => {
