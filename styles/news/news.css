@@ -356,4 +356,7 @@ body {
     padding: 1rem;
     font-size: 1rem;
   }
+}
+.hidden {
+  display: none;
 }/*# sourceMappingURL=news.css.map */
