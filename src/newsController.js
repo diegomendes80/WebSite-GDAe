@@ -16,8 +16,9 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const noticiasRef = ref(db, "noticias");
 
+//evento de cadastro de nova noticia no banco de dados
 const form = document.querySelector(".criar-noticia__form");
-if(form){
+if (form) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const imagemURL = document.getElementById("imagem").value;
@@ -54,14 +55,13 @@ if(form){
 let newsContent = [];
 let cardsGerados = [];
 
+//evento de criação de cards na pagina principal
 function createCards() {
   const cardsContainer = document.querySelector('.posts__cards');
-
   if(!cardsContainer) return;
+  cardsContainer.innerHTML = "";
+  cardsGerados = [];
 
-  cardsContainer.innerHTML = ""; 
-  cardsGerados = []; 
-  
   newsContent.forEach(card => {
     const divCard = document.createElement('div');
     divCard.classList.add('cards__card');
@@ -83,9 +83,8 @@ function createCards() {
     const cardDescription = document.createElement('p');
     cardDescription.classList.add('card-description');
     cardDescription.textContent = card.description;
-
-
     divCard.appendChild(cardDescription);
+
     divCard.addEventListener("click", () => {
       window.location.href = `/noticias.html?id=${card.id}`;
     });
@@ -95,10 +94,8 @@ function createCards() {
   });
 }
 
-function fillNotice() {
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get("id");
-  if(!id) return;
+//evento de carregar noticia principal na pagina de noticias
+function fillNotice(id) {
   const notice = newsContent.find(n => n.id == id);
   if(!notice) return;
 
@@ -119,41 +116,28 @@ function fillNotice() {
   if(authorEl) authorEl.textContent = `Autor: ${notice.author}`;
 }
 
+//faz o gerenciamento de quando tem que criar os cards na pagina principal e quando criar na pagina de noticias
 document.addEventListener("DOMContentLoaded", () => {
-  const btnNoticias = document.querySelector(".btnNoticias");
-
-  if (btnNoticias) {
-
-    btnNoticias.addEventListener("click", (e) => {
-      e.preventDefault();
-      onValue(noticiasRef, (snapshot) => {
-        if (snapshot.exists()) {
-          const newsArray = Object.values(snapshot.val());
-          const latestNews = newsArray[newsArray.length - 1];
-
-          if (latestNews) {
-            window.location.href = `/noticias.html?id=${latestNews.id}`;
-          }
-
-        }
-
-      }, { onlyOnce: true });
-    });
-  }
-
   onValue(noticiasRef, (snapshot) => {
-    if (snapshot.exists()) {
+    if(snapshot.exists()){
       const data = snapshot.val();
       const allNews = Object.values(data);
-      newsContent = allNews.slice(-4);
-      if (document.querySelector('.posts__cards')) {
-        createCards();
-      }
-      if (document.querySelector('.noticia-destaque__title')) {
-        fillNotice();
-        document.querySelector('.main-noticias').style.display = "flex";
-        document.querySelector('.footer').style.display = "flex";
+      newsContent = allNews;
+
+      // Cria cards na seção de posts
+      if(document.querySelector('.posts__cards')) createCards();
+
+      // Página de notícia detalhada
+      if(document.querySelector('.noticia-destaque__title')){
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id") || allNews[allNews.length - 1].id; // se não tiver id, pega a última
+        fillNotice(id);
+
+        const mainNoticias = document.querySelector('.main-noticias');
+        const footer = document.querySelector('.footer');
+        if(mainNoticias) mainNoticias.classList.remove('hidden');
+        if(footer) footer.classList.remove('hidden');
       }
     }
-  });
+  }, { onlyOnce: true });
 });
