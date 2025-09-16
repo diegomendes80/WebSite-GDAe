@@ -310,11 +310,11 @@
     }
 
     .main-noticias__secundarias {
-        @include mixins.margem-central(100%);
+        width: 100%;
         overflow-x: auto;
         order: 2; 
         padding-left: 0.5rem;  // garante espaço inicial
-        padding-right: 0.5rem; // garante espaço final
+        padding-right: .5rem; // garante espaço final
     }
 
     .main-noticias__noticia-destaque {
@@ -326,8 +326,8 @@
     }
 
     .posts__cards {
-        background-color: aqua;
-        @include mixins.margem-central(100%);
+        // background-color: aqua;
+        width: 100%;
         display: flex;
         flex-wrap: nowrap;
         gap: 1rem;

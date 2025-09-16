@@ -333,7 +333,6 @@ body {
     row-gap: 2rem;
   }
   .main-noticias__secundarias {
-    margin: 0 auto;
     width: 100%;
     overflow-x: auto;
     order: 2;
@@ -349,8 +348,6 @@ body {
     margin-bottom: 1rem;
   }
   .posts__cards {
-    background-color: aqua;
-    margin: 0 auto;
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
