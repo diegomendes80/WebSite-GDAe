@@ -335,7 +335,7 @@ body {
     row-gap: 2rem;
   }
   .main-noticias__secundarias {
-    width: 100%;
+    width: 120%;
     overflow-x: auto;
     order: 2;
     margin-top: 0;
