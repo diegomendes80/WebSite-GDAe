@@ -302,25 +302,29 @@
     /* MEDIA QUERIES CORRIGIDAS */
     @media (max-width: 768px) {
         .main-noticias{
-            @include mixins.margem-central(90%);
+            @include mixins.margem-central(100%);
+          
             display: flex;
             flex-direction: column; 
             margin-top: 1rem;
             margin-bottom: 3rem;
-            padding: 0 1rem;
+            // padding: 0 1rem;
             row-gap: 2rem;
         }
 
         .main-noticias__secundarias {
-            width: 120%; 
+            
+            @include mixins.margem-central(100%);
             overflow-x: auto;
             order: 2; 
             margin-top: 0;
             padding-bottom: 1rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
 
         .main-noticias__noticia-destaque {
-            @include mixins.margem-central(95%);
+            @include mixins.margem-central(85%);
             order: 1; /* Colocar a notícia destaque primeiro */
             padding: 1rem; /* Reduzir padding */
             min-height: auto; /* Remover altura mínima fixa */
@@ -328,13 +332,23 @@
         }
 
         .posts__cards {
-            width: 100%; /* Largura completa */
+            background-color: aqua;
+            @include mixins.margem-central(100%);
             display: flex;
             flex-wrap: nowrap;
             gap: 1rem;
             overflow-x: auto;
-            // padding: 0 1rem;
             -webkit-overflow-scrolling: touch; /* Scroll suave no iOS */
+
+             padding-left: 0;
+            padding-right: 1rem;
+            
+          
+            scroll-snap-type: x mandatory; 
+            scroll-padding: 0 1rem; 
+     
+            margin-left: 0;
+            margin-right: 0;
         }
 
         .posts__cards .cards__card {
@@ -390,24 +404,3 @@
             padding: 0.4rem 0.8rem;
         }
     }
-
-    // /* Para telas muito pequenas */
-    // @media (max-width: 480px) {
-    //     .main-noticias {
-    //         padding: 0 0.5rem;
-    //     }
-
-    //     .main-noticias__noticia-destaque {
-    //         padding: 0.75rem;
-    //     }
-
-    //     .noticia-destaque__title {
-    //         font-size: 1.5rem;
-    //     }
-
-    //     .posts__cards .cards__card {
-    //         width: 180px;
-    //         height: 280px;
-    //         min-width: 180px;
-    //     }
-    // }
