@@ -313,6 +313,7 @@
 
         .main-noticias__secundarias {
             width: 100%; 
+            overflow-x: auto;
             order: 2; 
             margin-top: 0;
             padding-bottom: 1rem;
