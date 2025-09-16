@@ -62,6 +62,9 @@ function createCards() {
   cardsContainer.innerHTML = "";
   cardsGerados = [];
 
+  console.log("🔄 Atualizando cards na página principal...");
+  console.log(newsContent)
+
   newsContent.forEach(card => {
     const divCard = document.createElement('div');
     divCard.classList.add('cards__card');
@@ -124,13 +127,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const allNews = Object.values(data);
       newsContent = allNews;
 
-      // Cria cards na seção de posts
-      if(document.querySelector('.posts__cards')) createCards();
+      // Recriar cards sempre que algo mudar
+      if(document.querySelector('.posts__cards')) {
+        createCards();
+      }
 
-      // Página de notícia detalhada
+      // Atualizar a página de detalhe em tempo real
       if(document.querySelector('.noticia-destaque__title')){
         const params = new URLSearchParams(window.location.search);
-        const id = params.get("id") || allNews[allNews.length - 1].id; // se não tiver id, pega a última
+        const id = params.get("id") || newsContent[newsContent.length - 1].id; 
         fillNotice(id);
 
         const mainNoticias = document.querySelector('.main-noticias');
@@ -139,5 +144,5 @@ document.addEventListener("DOMContentLoaded", () => {
         if(footer) footer.classList.remove('hidden');
       }
     }
-  }, { onlyOnce: true });
+  });
 });
