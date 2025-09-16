@@ -322,7 +322,6 @@ body {
   display: none !important; /* Forçar o hide */
 }
 
-/* MEDIA QUERIES CORRIGIDAS */
 @media (max-width: 768px) {
   .main-noticias {
     margin: 0 auto;
@@ -338,17 +337,15 @@ body {
     width: 100%;
     overflow-x: auto;
     order: 2;
-    margin-top: 0;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   .main-noticias__noticia-destaque {
     margin: 0 auto;
     width: 85%;
-    order: 1; /* Colocar a notícia destaque primeiro */
-    padding: 1rem; /* Reduzir padding */
-    min-height: auto; /* Remover altura mínima fixa */
+    order: 1;
+    padding: 1rem;
+    min-height: auto;
     margin-bottom: 1rem;
   }
   .posts__cards {
@@ -359,11 +356,12 @@ body {
     flex-wrap: nowrap;
     gap: 1rem;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* Scroll suave no iOS */
-    padding-left: 0;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 1rem;
     padding-right: 1rem;
     scroll-snap-type: x mandatory;
-    scroll-padding: 0 1rem;
+    scroll-padding-left: 1rem;
+    scroll-padding-right: 1rem;
     margin-left: 0;
     margin-right: 0;
   }
@@ -371,10 +369,11 @@ body {
     flex: 0 0 auto;
     width: 200px;
     height: 320px;
-    min-width: 200px; /* Garantir largura mínima */
+    min-width: 200px;
+    scroll-snap-align: start;
   }
   .noticia-destaque__title {
-    font-size: clamp(1.5rem, 5vw, 2rem); /* Ajustar tamanho da fonte */
+    font-size: clamp(1.5rem, 5vw, 2rem);
     text-align: center;
   }
   .noticia-destaque__summary {
@@ -383,23 +382,23 @@ body {
     text-align: center;
   }
   .noticia-destaque__img-container {
-    margin: 1rem 0; /* Reduzir margem */
+    margin: 1rem 0;
   }
   .noticia-destaque__img {
-    max-height: 250px; /* Reduzir altura máxima */
+    max-height: 250px;
   }
   .noticia-destaque__content {
-    padding: 1rem; /* Reduzir padding */
+    padding: 1rem;
     margin-top: 1rem;
   }
   .content__text {
     padding: 1rem;
     font-size: 0.95rem;
-    text-align: left; /* Melhor para mobile */
+    text-align: left;
     line-height: 1.6;
   }
   .content__text::first-letter {
-    font-size: 2rem; /* Reduzir tamanho da primeira letra */
+    font-size: 2rem;
   }
   .content__footer {
     flex-direction: column;
