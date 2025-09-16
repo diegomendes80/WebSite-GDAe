@@ -355,7 +355,6 @@ body {
     flex-wrap: nowrap;
     gap: 1rem;
     overflow-x: auto;
-    padding: 0 1rem;
     -webkit-overflow-scrolling: touch; /* Scroll suave no iOS */
   }
   .posts__cards .cards__card {
