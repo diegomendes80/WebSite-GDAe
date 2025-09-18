@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+import { query, limitToLast } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAg35NSYeocb77Q0oJEFLoT_QidZqVjlog",
@@ -14,7 +15,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-const noticiasRef = ref(db, "noticias");
+const noticiasRef = query(ref(db, "noticias"), limitToLast(4));
 
 //evento de cadastro de nova noticia no banco de dados
 const form = document.querySelector(".criar-noticia__form");
@@ -124,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
   onValue(noticiasRef, (snapshot) => {
     if(snapshot.exists()){
       const data = snapshot.val();
-      const allNews = Object.values(data);
+      const allNews = Object.values(data).reverse();
       newsContent = allNews;
 
       // Recriar cards sempre que algo mudar
